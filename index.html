@@ -1,0 +1,1748 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+<title>मैं जिला हूँ — Main Jila Hoon | India's District Knowledge Portal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Outfit:wght@300;400;500;600;700&family=Tiro+Devanagari+Hindi:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root{
+  --sand:#F5F0E8;--sand2:#EDE8DC;--sand3:#E0D8C8;
+  --ivory:#FDFAF4;--white:#FFFFFF;
+  --terra:#B94A1C;--terra2:#D45A25;--terra3:#8B3614;
+  --gold:#9A7B1C;--gold2:#C9A227;--gold3:#E8C84A;
+  --forest:#1A4A2E;--forest2:#245C3A;
+  --teal:#0C4A52;--teal2:#156070;
+  --navy:#0A1628;--navy2:#132038;--navy3:#1E2E4A;
+  --ink:#1A1410;--charcoal:#2C2418;--warm:#5A4832;
+  --muted:#8A7A68;--light:#B8A898;--pale:#D8CEC0;
+  --rule:rgba(154,123,28,0.15);--rule2:rgba(154,123,28,0.07);
+  --serif:'Libre Baskerville',Georgia,'Times New Roman',serif;
+  --sans:'Outfit',system-ui,sans-serif;
+  --deva:'Tiro Devanagari Hindi','Noto Serif Devanagari',serif;
+  --mono:'DM Mono','Courier New',monospace;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:var(--sans);background:var(--sand);color:var(--charcoal);-webkit-font-smoothing:antialiased;min-height:100vh}
+img{display:block;max-width:100%}
+a{text-decoration:none}
+button{cursor:pointer;border:none;outline:none;background:none}
+::-webkit-scrollbar{width:5px;height:5px}
+::-webkit-scrollbar-track{background:transparent}
+::-webkit-scrollbar-thumb{background:var(--pale);border-radius:3px}
+::-webkit-scrollbar-thumb:hover{background:var(--light)}
+
+/* ── TOPBAR ── */
+.topbar{background:var(--navy);padding:0 32px;height:52px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:200;border-bottom:1px solid rgba(255,255,255,0.06)}
+.tb-brand{display:flex;align-items:center;gap:11px}
+.tb-emblem{width:36px;height:36px;flex-shrink:0}
+.tb-name-hi{font-family:var(--deva);font-size:17px;color:var(--gold3);letter-spacing:0.5px;line-height:1}
+.tb-name-en{font-size:7.5px;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,0.28);margin-top:2px}
+.tb-sep{width:1px;height:26px;background:rgba(255,255,255,0.1);margin:0 14px}
+.tb-ci{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.3)}
+.tb-right{display:flex;align-items:center;gap:10px}
+.tb-live{display:flex;align-items:center;gap:5px;font-size:8.5px;letter-spacing:2px;color:#5EE8A0;font-weight:500}
+.ldot{width:5px;height:5px;border-radius:50%;background:#5EE8A0;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+.distsel{display:flex;align-items:center;gap:7px;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:5px;padding:5px 11px}
+.distsel label{font-size:8px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.32);white-space:nowrap}
+.distsel select{background:transparent;border:none;color:white;font-family:var(--sans);font-size:12px;font-weight:500;cursor:pointer;outline:none}
+.distsel select option{background:var(--navy2);color:white}
+
+/* ── TABNAV ── */
+.tabnav{background:var(--white);border-bottom:2px solid var(--sand2);position:sticky;top:52px;z-index:100;overflow-x:auto;scrollbar-width:none}
+.tabnav::-webkit-scrollbar{display:none}
+.tnav-inner{display:flex;max-width:1400px;margin:0 auto}
+.tn{display:flex;align-items:center;gap:6px;padding:14px 22px;font-size:10.5px;letter-spacing:1.8px;text-transform:uppercase;font-weight:700;color:var(--muted);border-bottom:3px solid transparent;margin-bottom:-2px;cursor:pointer;white-space:nowrap;transition:all .2s;flex-shrink:0}
+.tn:hover{color:var(--terra);background:rgba(185,74,28,0.03)}
+.tn.on{color:var(--terra);border-bottom-color:var(--terra)}
+
+/* ── PAGES ── */
+.page{display:none}.page.on{display:block}
+
+/* ══════════════════════════════════════
+   HOME PAGE
+══════════════════════════════════════ */
+/* Hero */
+.hero{position:relative;height:92vh;min-height:560px;overflow:hidden;display:flex;align-items:flex-end}
+.hero-bg{position:absolute;inset:0;background-size:cover;background-position:center 40%;transition:background-image .6s}
+.hero-ov{position:absolute;inset:0;background:linear-gradient(to top,rgba(10,22,40,0.95) 0%,rgba(10,22,40,0.55) 50%,rgba(10,22,40,0.15) 100%)}
+.hero-cnt{position:relative;z-index:2;padding:0 80px 80px;max-width:860px}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(201,162,39,0.18);border:1px solid rgba(201,162,39,0.35);border-radius:3px;padding:6px 14px;margin-bottom:22px;font-size:9.5px;letter-spacing:3px;text-transform:uppercase;color:var(--gold3);font-weight:700}
+.hero-h1{font-family:var(--serif);font-size:clamp(42px,5.5vw,78px);font-weight:700;color:white;line-height:1.04;letter-spacing:-1px;margin-bottom:14px}
+.hero-deva{font-family:var(--deva);font-size:clamp(26px,3.5vw,48px);color:var(--gold3);display:block;margin-bottom:10px;letter-spacing:1px}
+.hero-sub{font-size:16px;color:rgba(255,255,255,0.65);max-width:520px;line-height:1.72;margin-bottom:34px;font-weight:300}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+.btn-p{display:inline-flex;align-items:center;gap:8px;background:var(--terra);color:white;padding:14px 28px;border-radius:4px;font-size:13px;font-weight:700;letter-spacing:0.5px;cursor:pointer;transition:all .2s}
+.btn-p:hover{background:var(--terra2);transform:translateY(-2px);box-shadow:0 8px 24px rgba(185,74,28,0.3)}
+.btn-o{display:inline-flex;align-items:center;gap:8px;background:transparent;color:white;padding:13px 26px;border-radius:4px;font-size:13px;font-weight:500;cursor:pointer;transition:all .2s;border:1.5px solid rgba(255,255,255,0.32)}
+.btn-o:hover{border-color:white;background:rgba(255,255,255,0.08)}
+.hero-scroll{position:absolute;bottom:30px;right:80px;z-index:2;display:flex;flex-direction:column;align-items:center;gap:7px}
+.hero-scroll-txt{font-size:7.5px;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,0.35)}
+.hero-scroll-line{width:1px;height:42px;background:linear-gradient(to bottom,rgba(255,255,255,0.35),transparent)}
+
+/* Stats strip */
+.statsstrip{display:grid;grid-template-columns:repeat(4,1fr);background:var(--navy2)}
+.stat-cell{padding:24px 28px;text-align:center;border-right:1px solid rgba(255,255,255,0.06)}
+.stat-cell:last-child{border-right:none}
+.sc-n{font-family:var(--serif);font-size:34px;font-weight:700;color:var(--gold3);line-height:1}
+.sc-l{font-size:8.5px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.35);margin-top:6px}
+
+/* Wrap */
+.wrap{max-width:1360px;margin:0 auto;padding:0 48px}
+.section-pad{padding:80px 0}
+
+/* Sec header */
+.sec-hdr{margin-bottom:48px}
+.sec-tag{display:inline-flex;align-items:center;gap:8px;font-size:8.5px;letter-spacing:3px;text-transform:uppercase;color:var(--terra);font-weight:700;margin-bottom:12px}
+.sec-tag::before{content:'';display:block;width:22px;height:1.5px;background:var(--terra)}
+.sec-title{font-family:var(--serif);font-size:clamp(28px,3.2vw,42px);color:var(--navy);line-height:1.1;margin-bottom:14px;letter-spacing:-0.5px}
+.sec-body{font-size:15px;color:var(--warm);line-height:1.8;max-width:620px;font-weight:300}
+
+/* About */
+.about-split{display:grid;grid-template-columns:1fr 1fr;min-height:540px}
+.about-img-panel{position:relative;overflow:hidden}
+.about-img-panel img{width:100%;height:100%;object-fit:cover}
+.about-img-panel::after{content:'';position:absolute;inset:0;background:linear-gradient(to right,rgba(10,22,40,0.25),transparent)}
+.about-text-panel{background:var(--navy);padding:72px 60px;display:flex;flex-direction:column;justify-content:center}
+.atp-tag{font-size:8px;letter-spacing:3px;text-transform:uppercase;color:var(--gold3);font-weight:700;margin-bottom:16px;display:flex;align-items:center;gap:9px}
+.atp-tag::before{content:'';display:inline-block;width:18px;height:1.5px;background:var(--gold3)}
+.atp-title{font-family:var(--serif);font-size:28px;color:white;line-height:1.22;margin-bottom:18px;letter-spacing:-0.2px}
+.atp-body{font-size:14px;color:rgba(255,255,255,0.58);line-height:1.82;font-weight:300;margin-bottom:22px}
+.atp-quote{border-left:2px solid var(--gold2);padding-left:18px;font-family:var(--serif);font-style:italic;font-size:15.5px;color:var(--gold3);line-height:1.65}
+
+/* District tiles */
+.district-tiles{display:grid;grid-template-columns:repeat(5,1fr)}
+.dtile{position:relative;height:440px;overflow:hidden;cursor:pointer}
+.dtile-img{position:absolute;inset:0;background-size:cover;background-position:center;transition:transform .5s cubic-bezier(.16,1,.3,1)}
+.dtile:hover .dtile-img{transform:scale(1.07)}
+.dtile-ov{position:absolute;inset:0;background:linear-gradient(to top,rgba(10,22,40,.92) 0%,rgba(10,22,40,.35) 55%,rgba(10,22,40,.05) 100%);transition:all .3s}
+.dtile:hover .dtile-ov{background:linear-gradient(to top,rgba(10,22,40,.97) 0%,rgba(10,22,40,.6) 70%,rgba(10,22,40,.15) 100%)}
+.dtile-body{position:absolute;bottom:0;left:0;right:0;padding:24px 20px}
+.dtile-state{font-size:7.5px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold3);font-weight:700;margin-bottom:6px}
+.dtile-name{font-family:var(--serif);font-size:22px;color:white;font-weight:700;margin-bottom:4px;line-height:1.1}
+.dtile-hi{font-family:var(--deva);font-size:12px;color:rgba(201,162,39,.65);margin-bottom:9px}
+.dtile-desc{font-size:11px;color:rgba(255,255,255,0);line-height:1.55;transition:color .3s;font-weight:300}
+.dtile:hover .dtile-desc{color:rgba(255,255,255,.7)}
+.dtile-cta{display:flex;align-items:center;gap:5px;font-size:9.5px;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold3);font-weight:700;margin-top:10px;opacity:0;transform:translateY(6px);transition:all .3s}
+.dtile:hover .dtile-cta{opacity:1;transform:none}
+
+/* Seven outputs */
+.outputs-row{display:grid;grid-template-columns:repeat(7,1fr);border:1px solid var(--sand3);border-radius:6px;overflow:hidden}
+.output-cell{padding:28px 18px;border-right:1px solid var(--sand3);text-align:center;transition:all .2s;background:var(--white)}
+.output-cell:last-child{border-right:none}
+.output-cell:hover{background:var(--navy);transform:translateY(-2px)}
+.oc-n{font-size:8.5px;letter-spacing:1.5px;text-transform:uppercase;color:var(--terra);font-weight:700;margin-bottom:11px}
+.oc-ic{font-size:28px;margin-bottom:10px}
+.oc-title{font-family:var(--serif);font-size:13px;color:var(--navy);font-weight:700;margin-bottom:7px;transition:color .2s}
+.oc-sub{font-size:10px;color:var(--muted);line-height:1.5;font-weight:300;transition:color .2s}
+.output-cell:hover .oc-title,.output-cell:hover .oc-sub{color:rgba(255,255,255,.75)}
+
+/* Pillars */
+.pillars-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--sand3);border-left:1px solid var(--sand3)}
+.pillar-cell{padding:38px 34px;border-right:1px solid var(--sand3);border-bottom:1px solid var(--sand3);background:var(--white);transition:background .2s}
+.pillar-cell:hover{background:var(--sand)}
+.pc-num{font-family:var(--serif);font-size:54px;font-weight:700;color:var(--sand3);line-height:1;margin-bottom:14px}
+.pc-title{font-family:var(--serif);font-size:18px;color:var(--navy);margin-bottom:10px}
+.pc-body{font-size:13px;color:var(--warm);line-height:1.72;font-weight:300}
+
+/* Comparison table */
+.cmp-tbl{width:100%;border-collapse:collapse;font-size:13px}
+.cmp-tbl th{background:var(--navy);color:rgba(255,255,255,.5);font-size:8px;letter-spacing:2px;text-transform:uppercase;padding:13px 18px;text-align:left;font-weight:700;border-right:1px solid rgba(255,255,255,.06)}
+.cmp-tbl td{padding:13px 18px;color:var(--charcoal);border-bottom:1px solid var(--sand2);border-right:1px solid var(--sand2);vertical-align:top;line-height:1.5}
+.cmp-tbl tr:hover td{background:rgba(185,74,28,.03)}
+.cmp-tbl td:first-child{font-weight:700;color:var(--navy)}
+.india-row td{background:rgba(185,74,28,.04);font-weight:600}
+.india-row td:first-child{color:var(--terra)}
+
+/* Footer */
+.footer{background:var(--navy2);padding:52px 48px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:24px;border-top:1px solid rgba(255,255,255,.06)}
+.footer-brand .fb-hi{font-family:var(--deva);font-size:22px;color:var(--gold3);margin-bottom:5px}
+.footer-brand .fb-en{font-size:9px;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.28)}
+.footer-note{font-size:12px;color:rgba(255,255,255,.22);text-align:right;line-height:1.65}
+
+/* ══════════════════════════════════════
+   DISTRICT PORTAL
+══════════════════════════════════════ */
+.portal-wrap{display:grid;grid-template-columns:272px 1fr;min-height:calc(100vh - 108px)}
+
+/* Sidebar */
+.sb{background:var(--white);border-right:1px solid var(--sand3);overflow-y:auto;max-height:calc(100vh - 108px);position:sticky;top:108px}
+.sb::-webkit-scrollbar{width:3px}
+.sb::-webkit-scrollbar-thumb{background:var(--sand3)}
+.sb-photo{position:relative;height:195px;overflow:hidden}
+.sb-photo img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.sb-photo:hover img{transform:scale(1.03)}
+.sb-photo-ov{position:absolute;inset:0;background:linear-gradient(to top,rgba(10,22,40,.9),rgba(10,22,40,.2))}
+.sb-photo-txt{position:absolute;bottom:0;left:0;right:0;padding:16px}
+.sp-name{font-family:var(--serif);font-size:22px;font-weight:700;color:white;line-height:1}
+.sp-hi{font-family:var(--deva);font-size:12px;color:var(--gold3);margin-top:3px}
+.sp-state{font-size:8px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.4);margin-top:4px}
+.sb-kpis{display:grid;grid-template-columns:1fr 1fr;background:var(--navy2)}
+.sb-kpi{padding:10px 13px;border-right:1px solid rgba(255,255,255,.07);border-bottom:1px solid rgba(255,255,255,.07)}
+.sb-kpi:nth-child(even){border-right:none}
+.sb-kpi:nth-last-child(-n+2){border-bottom:none}
+.sbk-n{font-family:var(--serif);font-size:15.5px;font-weight:700;color:var(--gold3)}
+.sbk-l{font-size:7px;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,.3);margin-top:1px}
+.sb-srch{padding:10px 12px;border-bottom:1px solid var(--sand2);position:relative}
+.sb-srch input{width:100%;padding:8px 10px 8px 28px;background:var(--sand);border:1px solid var(--sand3);border-radius:4px;font-family:var(--sans);font-size:12px;color:var(--charcoal);outline:none;transition:border-color .15s}
+.sb-srch input:focus{border-color:var(--terra)}
+.sb-srch input::placeholder{color:var(--light)}
+.sb-srch-ic{position:absolute;left:21px;top:50%;transform:translateY(-50%);font-size:11px;color:var(--light)}
+.sb-grp{border-bottom:1px solid var(--sand2)}
+.sb-grp-h{padding:8px 13px 4px;font-size:7.5px;letter-spacing:2.5px;text-transform:uppercase;color:var(--muted);font-weight:700}
+.sbn{display:flex;align-items:center;gap:8px;padding:9px 13px;font-size:12px;color:var(--warm);cursor:pointer;transition:all .15s;border-left:2.5px solid transparent;font-weight:400}
+.sbn:hover{color:var(--terra);background:rgba(185,74,28,.04)}
+.sbn.on{color:var(--terra);border-left-color:var(--terra);background:rgba(185,74,28,.05);font-weight:600}
+.sbn .ni{font-size:13px;width:16px;text-align:center;opacity:.75}
+.sbn .nc{margin-left:auto;font-size:9px;color:var(--light);background:var(--sand2);padding:1px 6px;border-radius:10px}
+
+/* Main panel */
+.pmain{overflow-y:auto;max-height:calc(100vh - 108px);background:var(--sand)}
+.pmain::-webkit-scrollbar{width:4px}
+.pmain::-webkit-scrollbar-thumb{background:var(--sand3)}
+.cpanel{display:none}.cpanel.on{display:block}
+
+/* Panel banner */
+.p-banner{position:relative;height:210px;overflow:hidden}
+.p-banner img{width:100%;height:100%;object-fit:cover}
+.p-banner-ov{position:absolute;inset:0;background:linear-gradient(to right,rgba(10,22,40,.88) 0%,rgba(10,22,40,.4) 70%,transparent 100%)}
+.p-banner-txt{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;padding:34px 38px}
+.pb-bc{font-size:7.5px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:9px;display:flex;align-items:center;gap:5px}
+.pb-bc span{color:var(--gold3)}
+.pb-title{font-family:var(--serif);font-size:27px;font-weight:700;color:white;line-height:1.1}
+.pb-sub{font-size:12px;color:rgba(255,255,255,.5);margin-top:6px;font-weight:300}
+
+.cbody{padding:28px 32px 40px;background:var(--sand)}
+
+/* Info cards */
+.info-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:28px}
+.ic{background:var(--white);border:1px solid var(--sand3);border-radius:6px;padding:18px 16px;position:relative;overflow:hidden;transition:all .2s}
+.ic::after{content:'';position:absolute;top:0;left:0;right:0;height:2.5px;background:linear-gradient(90deg,var(--terra),var(--terra2))}
+.ic:hover{box-shadow:0 6px 24px rgba(0,0,0,.07);transform:translateY(-2px)}
+.ic-ico{font-size:20px;margin-bottom:8px}
+.ic-lb{font-size:7.5px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);font-weight:700;margin-bottom:3px}
+.ic-vl{font-family:var(--serif);font-size:16.5px;font-weight:700;color:var(--navy)}
+.ic-sb{font-size:10px;color:var(--muted);margin-top:2px;line-height:1.4}
+.ic-badge{display:inline-flex;margin-top:8px;font-size:8.5px;font-weight:700;padding:2px 8px;border-radius:2px;letter-spacing:.5px}
+.ibg{background:rgba(26,74,46,.1);color:var(--forest)}
+.iba{background:rgba(154,123,28,.1);color:var(--gold)}
+.ibb{background:rgba(10,22,40,.08);color:var(--navy)}
+
+/* Section head */
+.sh{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:16px}
+.sh h3{font-family:var(--serif);font-size:19px;color:var(--navy);position:relative;padding-bottom:8px}
+.sh h3::after{content:'';position:absolute;bottom:0;left:0;width:26px;height:2px;background:var(--terra)}
+.sh-va{font-size:9.5px;letter-spacing:1.5px;text-transform:uppercase;color:var(--terra);cursor:pointer;font-weight:700}
+
+/* Heritage grid */
+.hgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:14px}
+.hcard{background:var(--white);border:1px solid var(--sand3);border-radius:6px;overflow:hidden;cursor:pointer;transition:all .25s}
+.hcard:hover{box-shadow:0 14px 44px rgba(0,0,0,.1);transform:translateY(-4px);border-color:var(--pale)}
+.hc-img{height:130px;overflow:hidden;position:relative;background:var(--sand2)}
+.hc-img img{width:100%;height:100%;object-fit:cover;transition:transform .45s}
+.hcard:hover .hc-img img{transform:scale(1.06)}
+.hc-tp{position:absolute;top:8px;right:8px;background:rgba(10,22,40,.82);color:var(--gold3);font-size:6px;letter-spacing:1.5px;text-transform:uppercase;padding:2px 7px;border-radius:2px;font-weight:700}
+.hc-bd{padding:12px 13px}
+.hc-nm{font-family:var(--serif);font-size:13px;font-weight:700;color:var(--navy);line-height:1.2;margin-bottom:3px}
+.hc-mt{font-size:9.5px;color:var(--muted)}
+.gmbtn{display:inline-flex;align-items:center;gap:4px;margin-top:8px;padding:5px 9px;background:#1A73E8;border-radius:3px;font-size:8px;font-weight:700;color:white;letter-spacing:.3px;transition:opacity .15s}
+.gmbtn:hover{opacity:.88}
+
+/* People cards */
+.plist{display:flex;flex-direction:column;gap:10px}
+.pcard{background:var(--white);border:1px solid var(--sand3);border-radius:6px;padding:14px 16px;display:flex;align-items:center;gap:13px;cursor:pointer;transition:all .2s}
+.pcard:hover{border-color:var(--terra);box-shadow:0 4px 18px rgba(0,0,0,.06);transform:translateX(4px)}
+.pav-ico{width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;background:var(--sand2);border:2px solid var(--sand3)}
+.pnm{font-family:var(--serif);font-size:14px;font-weight:700;color:var(--navy)}
+.prl{font-size:10px;color:var(--muted);margin-top:1px}
+.ptag{font-size:7px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:2px 7px;border-radius:2px}
+
+/* Timeline */
+.tl{position:relative;padding-left:28px}
+.tl::before{content:'';position:absolute;left:10px;top:4px;bottom:0;width:1.5px;background:linear-gradient(to bottom,var(--terra),rgba(185,74,28,.06))}
+.tli{position:relative;margin-bottom:24px}
+.tl-dot{position:absolute;left:-21px;top:4px;width:9px;height:9px;border-radius:50%;background:var(--terra);border:2px solid var(--sand)}
+.tl-yr{font-size:8.5px;letter-spacing:1.5px;text-transform:uppercase;color:var(--terra);font-weight:700}
+.tl-ev{font-family:var(--serif);font-size:15px;font-weight:700;color:var(--navy);margin-top:2px}
+.tl-de{font-size:12.5px;color:var(--warm);margin-top:4px;line-height:1.65;font-weight:300}
+
+/* Flora fauna */
+.ff-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:11px}
+.ff-cell{background:var(--white);border:1px solid var(--sand3);border-radius:6px;padding:15px 14px;text-align:center;transition:all .2s}
+.ff-cell:hover{border-color:var(--forest2);transform:translateY(-2px);box-shadow:0 4px 14px rgba(0,0,0,.06)}
+.ff-ic{font-size:28px;margin-bottom:7px}
+.ff-nm{font-family:var(--serif);font-size:12.5px;font-weight:700;color:var(--navy);margin-bottom:3px;line-height:1.2}
+.ff-sub{font-size:10px;color:var(--muted);font-weight:300;line-height:1.4}
+.ff-tag{font-size:7.5px;font-weight:700;padding:2px 7px;border-radius:10px;margin-top:7px;display:inline-block}
+.fft-e{background:rgba(26,74,46,.1);color:var(--forest)}
+.fft-r{background:rgba(139,26,20,.1);color:#8B1A14}
+.fft-g{background:rgba(12,74,82,.1);color:var(--teal)}
+.geo-text{background:var(--white);border:1px solid var(--sand3);border-radius:6px;padding:22px;margin-bottom:22px;font-size:14px;color:var(--warm);line-height:1.78;font-weight:300}
+
+/* ══════════════════════════════════════
+   MAP
+══════════════════════════════════════ */
+.map-layout{display:grid;grid-template-columns:1fr 290px;min-height:calc(100vh - 108px)}
+.gmap-wrap{position:relative;background:#E8E0D0}
+#gmap{width:100%;height:100%;min-height:500px}
+.map-ctrl{position:absolute;top:14px;left:14px;z-index:10}
+.mc-card{background:white;border:1px solid var(--sand3);border-radius:6px;padding:13px 15px;box-shadow:0 4px 20px rgba(0,0,0,.09);min-width:195px;margin-bottom:8px}
+.mc-t{font-family:var(--serif);font-size:12px;font-weight:700;color:var(--navy);margin-bottom:9px}
+.fb{display:inline-flex;align-items:center;gap:3px;padding:4px 9px;margin:2px 2px 2px 0;border:1px solid var(--sand3);border-radius:3px;background:var(--sand);color:var(--warm);font-size:8.5px;letter-spacing:1px;text-transform:uppercase;cursor:pointer;transition:all .15s;font-weight:600}
+.fb:hover,.fb.on{background:var(--terra);border-color:var(--terra);color:white}
+.map-bottom{position:absolute;bottom:14px;left:14px;background:white;border:1px solid var(--sand3);border-radius:6px;padding:10px 15px;display:flex;gap:20px;z-index:10;box-shadow:0 4px 20px rgba(0,0,0,.09)}
+.mb-n{font-family:var(--serif);font-size:19px;font-weight:700;color:var(--navy)}
+.mb-l{font-size:7.5px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);margin-top:1px}
+.map-side{background:white;border-left:1px solid var(--sand3);overflow-y:auto;max-height:calc(100vh - 108px)}
+.ms-h{padding:17px 15px 12px;border-bottom:1px solid var(--sand2);font-family:var(--serif);font-size:14px;font-weight:700;color:var(--navy)}
+.ms-lr{display:flex;align-items:center;justify-content:space-between;padding:9px 15px;border-bottom:1px solid var(--sand2)}
+.ms-lr-l{display:flex;align-items:center;gap:7px;font-size:12px;color:var(--warm)}
+.tog{width:32px;height:17px;border-radius:9px;background:var(--sand3);position:relative;cursor:pointer;transition:background .2s;flex-shrink:0}
+.tog.on{background:var(--terra)}
+.tog::after{content:'';position:absolute;width:11px;height:11px;border-radius:50%;background:white;top:3px;left:3px;transition:left .2s;box-shadow:0 1px 3px rgba(0,0,0,.22)}
+.tog.on::after{left:18px}
+.ms-sites{padding:14px}
+.ms-sh{font-size:7.5px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);font-weight:700;margin-bottom:9px}
+.site-row{display:flex;align-items:flex-start;gap:8px;padding:9px 0;border-bottom:1px solid var(--sand2);cursor:pointer;transition:all .15s}
+.site-row:hover{transform:translateX(3px)}
+.sr-dot{width:7px;height:7px;border-radius:50%;margin-top:4px;flex-shrink:0}
+.sr-n{font-family:var(--serif);font-size:12px;color:var(--navy);font-weight:700}
+.sr-t{font-size:9px;color:var(--muted);margin-top:1px}
+.sr-gm{display:inline-flex;gap:3px;margin-top:4px;padding:2px 6px;background:#1A73E8;border-radius:2px;font-size:7.5px;font-weight:700;color:white;text-decoration:none}
+
+/* ══════════════════════════════════════
+   DASHBOARD
+══════════════════════════════════════ */
+.dash{background:var(--navy);min-height:calc(100vh - 108px);padding:22px 24px 44px}
+.dash-head{background:linear-gradient(135deg,rgba(201,162,39,.12),transparent);border:1px solid rgba(201,162,39,.18);border-radius:8px;padding:20px 24px;margin-bottom:18px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:13px}
+.dh-t{font-family:var(--serif);font-size:19px;font-weight:700;color:white}
+.dh-s{font-size:10.5px;color:rgba(255,255,255,.32);margin-top:3px}
+.dh-r{display:flex;flex-direction:column;align-items:flex-end;gap:5px}
+.dh-ts{font-size:8.5px;color:rgba(255,255,255,.28);letter-spacing:1px}
+.dh-lv{display:flex;align-items:center;gap:5px;font-size:8px;letter-spacing:2px;color:#5EE8A0;background:rgba(46,160,67,.1);border:1px solid rgba(46,160,67,.2);border-radius:3px;padding:3px 8px;font-weight:700}
+.kstrip{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-bottom:14px}
+.kpi{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:6px;padding:14px 13px;position:relative;overflow:hidden;transition:all .2s}
+.kpi:hover{background:rgba(255,255,255,.07)}
+.kpi::before{content:'';position:absolute;top:0;left:0;right:0;height:2px}
+.ks::before{background:linear-gradient(90deg,var(--terra),var(--terra2))}
+.kn::before{background:linear-gradient(90deg,#1A73E8,#4DA3FF)}
+.kg::before{background:linear-gradient(90deg,var(--gold),var(--gold2))}
+.kf::before{background:linear-gradient(90deg,var(--forest),var(--forest2))}
+.kr::before{background:linear-gradient(90deg,#8B1A14,#C53030)}
+.k-ic{font-size:18px;margin-bottom:6px}
+.k-vl{font-family:var(--serif);font-size:22px;font-weight:700;color:white;line-height:1}
+.k-lb{font-size:8px;letter-spacing:1px;text-transform:uppercase;color:rgba(255,255,255,.32);margin-top:3px;font-weight:700}
+.k-tr{display:flex;align-items:center;gap:3px;margin-top:5px;font-size:9px;font-weight:700}
+.up{color:#5EE8A0}.dn{color:#FC8181}
+.drow{display:grid;gap:11px;margin-bottom:11px}
+.r3{grid-template-columns:repeat(3,1fr)}
+.r21{grid-template-columns:2fr 1fr}
+.r12{grid-template-columns:1fr 2fr}
+.dc{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:6px;overflow:hidden}
+.dc-h{padding:11px 15px 9px;border-bottom:1px solid rgba(255,255,255,.06);display:flex;align-items:center;justify-content:space-between}
+.dc-t{font-family:var(--serif);font-size:13px;color:rgba(255,255,255,.85);font-weight:700}
+.dc-b{font-size:7.5px;letter-spacing:1.5px;text-transform:uppercase;padding:2px 7px;border-radius:2px;font-weight:700}
+.dbg{background:rgba(26,74,46,.25);color:#5EE8A0}
+.dbb{background:rgba(26,115,232,.2);color:rgba(147,200,255,.9)}
+.dbs{background:rgba(185,74,28,.2);color:var(--terra2)}
+.dbo{background:rgba(154,123,28,.2);color:var(--gold2)}
+.dbr{background:rgba(139,26,20,.2);color:#FC8181}
+.dc-body{padding:12px 15px}
+.bars{display:flex;flex-direction:column;gap:8px}
+.barr{display:flex;align-items:center;gap:8px}
+.bl{font-size:9.5px;color:rgba(255,255,255,.38);width:108px;text-align:right;flex-shrink:0;line-height:1.2}
+.bt{flex:1;height:5px;background:rgba(255,255,255,.07);border-radius:2px;overflow:hidden}
+.bf{height:100%;border-radius:2px;transition:width 1.2s cubic-bezier(.16,1,.3,1)}
+.bp{font-size:9px;color:rgba(255,255,255,.32);width:28px;text-align:right;flex-shrink:0;font-weight:700}
+.rings{display:flex;justify-content:space-around;flex-wrap:wrap;gap:5px}
+.ri{text-align:center}
+.rsvg{transform:rotate(-90deg)}
+.rbg{fill:none;stroke:rgba(255,255,255,.07);stroke-width:6}
+.rfi{fill:none;stroke-width:6;stroke-linecap:round;transition:stroke-dashoffset 1.4s cubic-bezier(.16,1,.3,1)}
+.rv{font-family:var(--serif);font-size:14px;font-weight:700;color:white}
+.rl{font-size:7.5px;letter-spacing:1px;text-transform:uppercase;color:rgba(255,255,255,.32);margin-top:2px;font-weight:700}
+.dtbl{width:100%;border-collapse:collapse}
+.dtbl th{background:rgba(255,255,255,.05);padding:8px 12px;text-align:left;font-size:7.5px;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,.32);border-bottom:1px solid rgba(255,255,255,.06);font-weight:700}
+.dtbl td{padding:9px 12px;font-size:11.5px;color:rgba(255,255,255,.58);border-bottom:1px solid rgba(255,255,255,.04)}
+.dtbl tr:hover td{background:rgba(255,255,255,.03);color:rgba(255,255,255,.85)}
+.sdot{width:6px;height:6px;border-radius:50%;display:inline-block;margin-right:4px}
+.gauges{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+.gauge{padding:9px;background:rgba(255,255,255,.03);border-radius:5px}
+.g-tp{display:flex;justify-content:space-between;margin-bottom:5px}
+.g-lb{font-size:9.5px;color:rgba(255,255,255,.38)}
+.g-vl{font-family:var(--serif);font-size:13px;font-weight:700}
+.g-br{height:4px;background:rgba(255,255,255,.07);border-radius:2px;overflow:hidden}
+.g-fi{height:100%;border-radius:2px}
+.alerts{display:flex;flex-direction:column;gap:7px}
+.alert{display:flex;gap:8px;padding:9px 11px;border-radius:5px;border-left:3px solid;font-size:11px}
+.ahi{background:rgba(139,26,20,.15);border-color:#C53030;color:#FC8181}
+.amd{background:rgba(154,123,28,.1);border-color:var(--gold);color:var(--gold2)}
+.alo{background:rgba(26,74,46,.12);border-color:#38A169;color:#5EE8A0}
+.a-tx{line-height:1.4}
+.a-ts{font-size:7.5px;color:rgba(255,255,255,.26);margin-top:2px;font-weight:700;letter-spacing:.5px}
+.act{display:flex;flex-direction:column}
+.ai{display:flex;gap:8px;padding:9px 0;border-bottom:1px solid rgba(255,255,255,.05)}
+.ai-ic{width:27px;height:27px;border-radius:5px;display:flex;align-items:center;justify-content:center;font-size:12px;flex-shrink:0}
+.ai-tx{font-size:11px;color:rgba(255,255,255,.52);line-height:1.4}
+.ai-ts{font-size:7.5px;color:rgba(255,255,255,.22);margin-top:2px;font-weight:700;letter-spacing:.5px}
+.ogrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(185px,1fr));gap:10px}
+.ocard{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:6px;padding:13px;transition:all .2s}
+.ocard:hover{background:rgba(255,255,255,.07);transform:translateY(-2px);border-color:rgba(201,162,39,.28)}
+.ob{font-size:7px;letter-spacing:2px;text-transform:uppercase;padding:2px 6px;border-radius:2px;margin-bottom:8px;display:inline-block;font-weight:700}
+.on-n{font-family:var(--serif);font-size:12px;color:rgba(255,255,255,.85);margin-bottom:3px;font-weight:700}
+.on-p{font-size:10px;color:rgba(255,255,255,.35)}
+.on-det{margin-top:8px;padding-top:8px;border-top:1px solid rgba(255,255,255,.06)}
+.on-d{display:flex;align-items:flex-start;gap:5px;font-size:9px;color:rgba(255,255,255,.28);margin-bottom:3px;line-height:1.3}
+.on-gm{display:flex;align-items:center;gap:4px;margin-top:9px;padding:5px 9px;background:#1A73E8;border-radius:3px;font-size:8.5px;font-weight:700;color:white;text-decoration:none;width:fit-content}
+
+/* ══════════════════════════════════════
+   MODAL
+══════════════════════════════════════ */
+.modal-bg{position:fixed;inset:0;background:rgba(10,22,40,.8);backdrop-filter:blur(6px);z-index:1000;display:none;align-items:center;justify-content:center;padding:20px}
+.modal-bg.open{display:flex}
+.modal-box{background:white;border-radius:8px;width:100%;max-width:575px;max-height:88vh;overflow-y:auto;box-shadow:0 32px 80px rgba(0,0,0,.4);animation:mAnim .22s cubic-bezier(.16,1,.3,1)}
+@keyframes mAnim{from{opacity:0;transform:scale(.95)translateY(12px)}to{opacity:1;transform:none}}
+.modal-box::-webkit-scrollbar{width:3px}
+.modal-box::-webkit-scrollbar-thumb{background:var(--sand3)}
+.m-photo{position:relative;height:210px;overflow:hidden}
+.m-photo img{width:100%;height:100%;object-fit:cover}
+.m-photo-ov{position:absolute;inset:0;background:linear-gradient(to top,rgba(10,22,40,.75),rgba(10,22,40,.1))}
+.m-photo-txt{position:absolute;bottom:0;left:0;right:0;padding:18px 22px}
+.m-sub{font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(--gold3);font-weight:700;margin-bottom:6px}
+.m-title{font-family:var(--serif);font-size:21px;font-weight:700;color:white;line-height:1.1}
+.m-close{position:absolute;top:12px;right:12px;width:29px;height:29px;border-radius:50%;background:rgba(255,255,255,.22);backdrop-filter:blur(4px);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:13px;color:white;transition:all .15s;border:none;z-index:2}
+.m-close:hover{background:rgba(255,255,255,.38)}
+.m-body{padding:20px 22px 26px}
+.m-tags{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:13px}
+.m-tag{font-size:8px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;padding:3px 9px;border-radius:2px}
+.m-desc{font-family:var(--noto,'Libre Baskerville',Georgia,serif);font-size:14px;color:var(--warm);line-height:1.78;margin-bottom:16px}
+.m-facts{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-bottom:16px}
+.mf{background:var(--sand);border-radius:5px;padding:11px 13px}
+.mf-l{font-size:8px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);font-weight:700}
+.mf-v{font-family:var(--serif);font-size:13px;font-weight:700;color:var(--navy);margin-top:2px}
+.m-gmbtn{display:flex;align-items:center;gap:8px;justify-content:center;padding:12px;background:#1A73E8;border-radius:5px;color:white;text-decoration:none;font-weight:700;font-size:13px;transition:opacity .15s}
+.m-gmbtn:hover{opacity:.88}
+
+/* ══════════════════════════════════════
+   RESPONSIVE
+══════════════════════════════════════ */
+@media(max-width:1100px){
+  .about-split,.district-tiles{grid-template-columns:1fr}
+  .about-img-panel{height:340px}
+  .district-tiles{grid-template-columns:repeat(3,1fr)}
+  .outputs-row{grid-template-columns:repeat(4,1fr)}
+  .pillars-grid{grid-template-columns:1fr 1fr}
+  .hero-cnt{padding:0 40px 60px}
+}
+@media(max-width:900px){
+  .portal-wrap{grid-template-columns:1fr}
+  .sb{position:static;max-height:none}
+  .pmain{max-height:none}
+  .map-layout{grid-template-columns:1fr}
+  .map-side{max-height:280px}
+  .kstrip{grid-template-columns:repeat(3,1fr)}
+  .r3,.r21,.r12{grid-template-columns:1fr}
+  .info-grid,.hgrid,.ff-grid,.ogrid{grid-template-columns:1fr 1fr}
+  .statsstrip{grid-template-columns:repeat(2,1fr)}
+  .district-tiles{grid-template-columns:repeat(2,1fr)}
+  .wrap{padding:0 24px}
+}
+@media(max-width:540px){
+  .info-grid,.hgrid,.ff-grid,.m-facts,.gauges{grid-template-columns:1fr}
+  .kstrip{grid-template-columns:1fr 1fr}
+  .topbar{padding:0 14px;flex-wrap:wrap;height:auto;padding:8px 14px}
+  .district-tiles{grid-template-columns:1fr}
+  .outputs-row,.pillars-grid{grid-template-columns:1fr 1fr}
+  .hero-h1{font-size:36px}
+  .distsel{display:none}
+}
+
+/* ═══════════ HOME PAGE PREMIUM CSS ═══════════ */
+
+/* HERO */
+.hero-section{position:relative;height:100vh;min-height:640px;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end}
+.hero-img-wrap{position:absolute;inset:0}
+.hero-img{width:100%;height:100%;object-fit:cover;object-position:center 30%;display:block}
+.hero-grad{position:absolute;inset:0;background:linear-gradient(to top,rgba(6,14,26,.97) 0%,rgba(6,14,26,.72) 38%,rgba(6,14,26,.28) 68%,rgba(6,14,26,.08) 100%)}
+.hero-body{position:relative;z-index:2;padding:0 88px 72px;max-width:1060px}
+.hero-top-label{display:inline-flex;align-items:center;gap:8px;font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.42);margin-bottom:22px;font-weight:500}
+.htl-dot{width:5px;height:5px;border-radius:50%;background:var(--terra);flex-shrink:0}
+.hero-h1{margin-bottom:18px;line-height:1}
+.hero-deva{display:block;font-family:var(--deva);font-size:clamp(32px,5vw,64px);color:var(--gold3);letter-spacing:2px;margin-bottom:8px}
+.hero-en{display:block;font-family:var(--serif);font-size:clamp(42px,6vw,88px);font-weight:700;color:white;line-height:1.02;letter-spacing:-2px}
+.hero-sub{font-size:clamp(14px,1.5vw,17px);color:rgba(255,255,255,.6);max-width:580px;line-height:1.76;margin-bottom:36px;font-weight:300}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:40px}
+.hbtn-primary{display:inline-flex;align-items:center;gap:10px;background:var(--terra);color:white;padding:15px 32px;border-radius:4px;font-size:14px;font-weight:700;letter-spacing:.3px;cursor:pointer;border:none;transition:all .22s;font-family:var(--sans)}
+.hbtn-primary:hover{background:var(--terra2);transform:translateY(-2px);box-shadow:0 12px 32px rgba(185,74,28,.35)}
+.hbtn-arrow{font-size:16px;transition:transform .2s}
+.hbtn-primary:hover .hbtn-arrow{transform:translateX(4px)}
+.hbtn-ghost{display:inline-flex;align-items:center;gap:10px;background:transparent;color:rgba(255,255,255,.78);padding:14px 30px;border-radius:4px;font-size:14px;font-weight:500;cursor:pointer;border:1.5px solid rgba(255,255,255,.28);transition:all .2s;font-family:var(--sans)}
+.hbtn-ghost:hover{border-color:rgba(255,255,255,.7);background:rgba(255,255,255,.07);color:white}
+.hero-districts-row{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.hdr-label{font-size:8.5px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.28);font-weight:700;margin-right:4px}
+.hdr-pill{font-family:var(--serif);font-size:12px;color:rgba(255,255,255,.52);padding:5px 14px;border:1px solid rgba(255,255,255,.14);border-radius:30px;cursor:pointer;transition:all .18s;font-style:italic}
+.hdr-pill:hover{color:var(--gold3);border-color:rgba(201,162,39,.5);background:rgba(201,162,39,.08)}
+.hero-scr-indicator{position:absolute;bottom:32px;right:88px;z-index:3;display:flex;flex-direction:column;align-items:center;gap:7px}
+.hsi-line{width:1px;height:48px;background:linear-gradient(to bottom,rgba(255,255,255,.4),transparent);animation:hsiAnim 2s infinite}
+@keyframes hsiAnim{0%,100%{opacity:.4}50%{opacity:1}}
+.hero-scr-indicator span{font-size:7.5px;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,.3)}
+
+/* STATS STRIP */
+.stats-strip{display:grid;grid-template-columns:repeat(5,1fr);background:var(--navy2);border-bottom:1px solid rgba(255,255,255,.05)}
+.ss-item{padding:26px 22px;text-align:center;border-right:1px solid rgba(255,255,255,.06)}
+.ss-item:last-child{border-right:none}
+.ss-n{font-family:var(--serif);font-size:36px;font-weight:700;color:var(--gold3);line-height:1}
+.ss-l{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.32);margin-top:7px;line-height:1.4}
+
+/* ABOUT SECTION */
+.about-section{display:grid;grid-template-columns:1fr 1fr;min-height:600px}
+.about-img-panel{position:relative;overflow:hidden}
+.about-img-panel img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s}
+.about-img-panel:hover img{transform:scale(1.03)}
+.about-img-caption{position:absolute;bottom:0;left:0;right:0;padding:20px 24px;background:linear-gradient(to top,rgba(6,14,26,.85),transparent);font-size:11px;color:rgba(255,255,255,.6);font-style:italic;line-height:1.5}
+.about-text-panel{background:var(--navy);padding:80px 68px;display:flex;flex-direction:column;justify-content:center}
+.atp-eyebrow{font-size:8.5px;letter-spacing:3px;text-transform:uppercase;color:var(--gold3);font-weight:700;margin-bottom:18px;display:flex;align-items:center;gap:10px}
+.atp-eyebrow::before{content:'';display:inline-block;width:24px;height:1.5px;background:var(--gold3)}
+.atp-h2{font-family:var(--serif);font-size:clamp(24px,2.8vw,36px);color:white;line-height:1.18;margin-bottom:22px;letter-spacing:-.3px}
+.atp-p{font-size:14px;color:rgba(255,255,255,.56);line-height:1.84;font-weight:300;margin-bottom:14px}
+.atp-quote{border-left:2px solid var(--gold2);padding:16px 20px;font-family:var(--serif);font-size:16px;color:var(--gold3);line-height:1.72;margin-top:24px;background:rgba(201,162,39,.06);border-radius:0 4px 4px 0}
+.atp-quote em{color:rgba(201,162,39,.7)}
+
+/* DISTRICTS SECTION */
+.districts-section{background:var(--sand);padding:0}
+.ds-header{padding:80px 88px 56px;max-width:900px}
+.ds-tag{font-size:8.5px;letter-spacing:3px;text-transform:uppercase;color:var(--terra);font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:9px}
+.ds-tag::before{content:'';display:block;width:22px;height:1.5px;background:var(--terra)}
+.ds-h2{font-family:var(--serif);font-size:clamp(32px,4vw,54px);color:var(--navy);line-height:1.05;margin-bottom:16px;letter-spacing:-1px}
+.ds-sub{font-size:15px;color:var(--warm);line-height:1.78;font-weight:300;max-width:620px}
+
+/* District tile grid */
+.dt-grid{display:grid;grid-template-columns:repeat(5,1fr)}
+.dt-tile{position:relative;height:520px;overflow:hidden;cursor:pointer;transition:all .3s}
+.dt-bg{position:absolute;inset:0}
+.dt-bg img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .55s cubic-bezier(.16,1,.3,1)}
+.dt-tile:hover .dt-bg img{transform:scale(1.08)}
+.dt-ov{position:absolute;inset:0;background:linear-gradient(to top,rgba(6,14,26,.93) 0%,rgba(6,14,26,.4) 55%,rgba(6,14,26,.05) 100%);transition:all .3s}
+.dt-tile:hover .dt-ov{background:linear-gradient(to top,rgba(6,14,26,.97) 0%,rgba(6,14,26,.6) 65%,rgba(6,14,26,.12) 100%)}
+.dt-body{position:absolute;bottom:0;left:0;right:0;padding:28px 22px}
+.dt-state{font-size:7.5px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold3);font-weight:700;margin-bottom:7px}
+.dt-name{font-family:var(--serif);font-size:26px;color:white;font-weight:700;margin-bottom:5px;line-height:1.05}
+.dt-hi{font-family:var(--deva);font-size:13px;color:rgba(201,162,39,.65);margin-bottom:10px}
+.dt-quote{font-family:var(--serif);font-style:italic;font-size:11.5px;color:rgba(255,255,255,0);line-height:1.58;transition:color .3s;max-height:0;overflow:hidden;transition:all .35s}
+.dt-tile:hover .dt-quote{color:rgba(255,255,255,.65);max-height:60px}
+.dt-cta{display:flex;align-items:center;gap:6px;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--gold3);font-weight:700;margin-top:12px;opacity:0;transform:translateY(7px);transition:all .3s}
+.dt-tile:hover .dt-cta{opacity:1;transform:none}
+.dt-num{position:absolute;top:18px;left:18px;font-family:var(--serif);font-size:11px;color:rgba(255,255,255,.2);font-weight:700;letter-spacing:1px}
+
+/* CRISIS SECTION */
+.crisis-section{background:var(--navy2);padding:88px 0}
+.crisis-inner{display:grid;grid-template-columns:1fr 1fr;gap:0;max-width:1360px;margin:0 auto;padding:0 88px;align-items:center;gap:72px}
+.cs-tag{font-size:8.5px;letter-spacing:3px;text-transform:uppercase;color:var(--terra2);font-weight:700;margin-bottom:18px;display:flex;align-items:center;gap:9px}
+.cs-tag::before{content:'';display:block;width:22px;height:1.5px;background:var(--terra2)}
+.cs-h2{font-family:var(--serif);font-size:clamp(28px,3.2vw,44px);color:white;line-height:1.1;margin-bottom:40px;letter-spacing:-.5px}
+.cs-stats{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.css-item{padding:20px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:6px;border-top:2px solid var(--terra)}
+.css-n{font-family:var(--serif);font-size:36px;font-weight:700;color:var(--terra2);line-height:1;margin-bottom:6px}
+.css-l{font-size:11px;color:rgba(255,255,255,.42);line-height:1.5;font-weight:300}
+.cs-right{position:relative}
+.cs-right img{width:100%;height:420px;object-fit:cover;border-radius:6px;display:block;filter:grayscale(15%)}
+.cs-img-note{position:absolute;bottom:0;left:0;right:0;padding:16px;background:linear-gradient(to top,rgba(6,14,26,.9),transparent);font-size:10.5px;color:rgba(255,255,255,.55);font-style:italic;line-height:1.5;border-radius:0 0 6px 6px}
+
+/* OUTPUTS */
+.outputs-section{background:var(--white);padding:88px 0}
+.os-wrap{max-width:1360px;margin:0 auto;padding:0 88px}
+.os-header{margin-bottom:56px;max-width:740px}
+.os-tag{font-size:8.5px;letter-spacing:3px;text-transform:uppercase;color:var(--terra);font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:9px}
+.os-tag::before{content:'';display:block;width:22px;height:1.5px;background:var(--terra)}
+.os-h2{font-family:var(--serif);font-size:clamp(28px,3.5vw,48px);color:var(--navy);line-height:1.1;margin-bottom:14px;letter-spacing:-.5px}
+.os-sub{font-size:15px;color:var(--warm);line-height:1.78;font-weight:300}
+.os-grid{display:grid;grid-template-columns:repeat(7,1fr);border:1px solid var(--sand3);border-radius:6px;overflow:hidden}
+.os-item{padding:32px 20px;border-right:1px solid var(--sand3);transition:all .22s;background:var(--white);cursor:default}
+.os-item:last-child{border-right:none}
+.os-item:hover{background:var(--navy);transform:translateY(-3px);box-shadow:0 8px 32px rgba(10,22,40,.15);z-index:2;position:relative}
+.osi-num{font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:var(--terra);font-weight:700;margin-bottom:14px}
+.osi-ico{font-size:32px;margin-bottom:12px}
+.osi-title{font-family:var(--serif);font-size:13.5px;color:var(--navy);font-weight:700;margin-bottom:8px;line-height:1.3;transition:color .2s}
+.osi-body{font-size:10.5px;color:var(--muted);line-height:1.58;font-weight:300;transition:color .2s}
+.os-item:hover .osi-title,.os-item:hover .osi-body{color:rgba(255,255,255,.75)}
+.os-item:hover .osi-num{color:var(--gold3)}
+
+/* PILLARS — large editorial with images */
+.pillars-section{background:var(--sand);padding:88px 0}
+.ps-header{max-width:1360px;margin:0 auto;padding:0 88px 56px}
+.ps-tag{font-size:8.5px;letter-spacing:3px;text-transform:uppercase;color:var(--terra);font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:9px}
+.ps-tag::before{content:'';display:block;width:22px;height:1.5px;background:var(--terra)}
+.ps-h2{font-family:var(--serif);font-size:clamp(28px,3.5vw,48px);color:var(--navy);line-height:1.1;letter-spacing:-.5px}
+.ps-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--sand3);border-left:1px solid var(--sand3)}
+.ps-item{background:var(--white);border-right:1px solid var(--sand3);border-bottom:1px solid var(--sand3);overflow:hidden;transition:all .25s}
+.ps-item:hover{transform:translateY(-4px);box-shadow:0 16px 48px rgba(0,0,0,.1);z-index:2;position:relative}
+.psi-n{padding:18px 24px 0;font-family:var(--serif);font-size:13px;font-weight:700;color:var(--terra);letter-spacing:.5px}
+.psi-img{width:100%;height:200px;object-fit:cover;display:block;transition:transform .45s}
+.ps-item:hover .psi-img{transform:scale(1.04)}
+.psi-body{padding:22px 26px 28px}
+.psi-title{font-family:var(--serif);font-size:18px;color:var(--navy);font-weight:700;margin-bottom:10px;line-height:1.2}
+.psi-text{font-size:13px;color:var(--warm);line-height:1.72;font-weight:300}
+
+/* GLOBAL COMPARISON */
+.compare-section{background:var(--white);padding:88px 0}
+.comp-wrap{max-width:1360px;margin:0 auto;padding:0 88px}
+.comp-hdr{margin-bottom:48px;max-width:780px}
+.comp-tag{font-size:8.5px;letter-spacing:3px;text-transform:uppercase;color:var(--terra);font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:9px}
+.comp-tag::before{content:'';display:block;width:22px;height:1.5px;background:var(--terra)}
+.comp-h2{font-family:var(--serif);font-size:clamp(28px,3.2vw,44px);color:var(--navy);line-height:1.1;margin-bottom:14px;letter-spacing:-.5px}
+.comp-sub{font-size:15px;color:var(--warm);line-height:1.78;font-weight:300}
+.comp-tbl-wrap{overflow-x:auto;border:1px solid var(--sand3);border-radius:6px;overflow:hidden}
+.comp-tbl{width:100%;border-collapse:collapse;font-size:13.5px}
+.comp-tbl th{background:var(--navy);color:rgba(255,255,255,.48);font-size:8.5px;letter-spacing:2px;text-transform:uppercase;padding:14px 20px;text-align:left;font-weight:700;border-right:1px solid rgba(255,255,255,.06)}
+.comp-tbl td{padding:14px 20px;color:var(--charcoal);border-bottom:1px solid var(--sand2);border-right:1px solid var(--sand2);vertical-align:top;line-height:1.55}
+.comp-tbl tr:hover td{background:rgba(185,74,28,.03)}
+.comp-tbl td:first-child{font-weight:700;color:var(--navy);white-space:nowrap}
+.india-row td{background:rgba(185,74,28,.05)!important;font-weight:600}
+.india-row td:first-child{color:var(--terra)}
+
+/* DECLARATION SECTION */
+.declare-section{position:relative;height:700px;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.decl-bg{position:absolute;inset:0}
+.decl-bg img{width:100%;height:100%;object-fit:cover;display:block;object-position:center 40%}
+.decl-ov{position:absolute;inset:0;background:rgba(6,14,26,.82)}
+.decl-body{position:relative;z-index:2;text-align:center;max-width:780px;padding:0 40px}
+.decl-tag{font-size:8.5px;letter-spacing:3px;text-transform:uppercase;color:var(--gold3);font-weight:700;margin-bottom:28px;display:flex;align-items:center;justify-content:center;gap:10px}
+.decl-tag::before,.decl-tag::after{content:'';display:block;width:32px;height:1.5px;background:var(--gold2)}
+.decl-quote{font-family:var(--serif);font-size:clamp(16px,1.8vw,22px);color:rgba(255,255,255,.82);line-height:1.78;margin-bottom:36px;font-style:italic}
+.decl-quote strong{color:white;font-style:normal;display:block;margin-top:20px;font-size:clamp(18px,2vw,26px)}
+.decl-btn{display:inline-flex;align-items:center;gap:10px;background:var(--terra);color:white;padding:15px 34px;border-radius:4px;font-size:14px;font-weight:700;cursor:pointer;border:none;font-family:var(--sans);transition:all .22s}
+.decl-btn:hover{background:var(--terra2);transform:translateY(-2px)}
+
+/* FOOTER */
+.site-footer{background:var(--ink);padding:56px 88px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:32px}
+.sf-brand{}
+.sf-deva{font-family:var(--deva);font-size:24px;color:var(--gold3);margin-bottom:5px}
+.sf-en{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.28);margin-bottom:3px}
+.sf-ci{font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,.18)}
+.sf-mid{}
+.sf-col-h{font-size:8px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.25);font-weight:700;margin-bottom:10px}
+.sf-links{display:flex;gap:18px}
+.sf-links span{font-size:13px;color:rgba(255,255,255,.4);cursor:pointer;transition:color .15s}
+.sf-links span:hover{color:var(--gold3)}
+.sf-note{font-size:12px;color:rgba(255,255,255,.18);text-align:right;line-height:1.7}
+
+/* RESPONSIVE HOME */
+@media(max-width:1200px){
+  .hero-body{padding:0 48px 60px}
+  .ds-header{padding:64px 48px 44px}
+  .crisis-inner,.os-wrap,.comp-wrap,.ps-header{padding-left:48px;padding-right:48px}
+  .site-footer{padding:48px}
+  .dt-grid{grid-template-columns:repeat(3,1fr)}
+  .dt-tile{height:460px}
+  .os-grid{grid-template-columns:repeat(4,1fr)}
+  .ps-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:900px){
+  .hero-body{padding:0 28px 48px}
+  .hero-en{font-size:42px;letter-spacing:-1px}
+  .about-section{grid-template-columns:1fr}
+  .about-img-panel{height:380px}
+  .about-text-panel{padding:52px 36px}
+  .crisis-inner{grid-template-columns:1fr;gap:40px;padding:0 28px}
+  .ds-header{padding:52px 28px 36px}
+  .os-wrap,.comp-wrap,.ps-header{padding-left:28px;padding-right:28px}
+  .dt-grid{grid-template-columns:repeat(2,1fr)}
+  .stats-strip{grid-template-columns:repeat(3,1fr)}
+  .os-grid{grid-template-columns:repeat(3,1fr)}
+  .ps-grid{grid-template-columns:1fr}
+  .site-footer{padding:40px 28px;flex-direction:column;align-items:flex-start}
+  .sf-note{text-align:left}
+}
+@media(max-width:540px){
+  .hero-body{padding:0 20px 40px}
+  .hero-scr-indicator{display:none}
+  .dt-grid{grid-template-columns:1fr}
+  .dt-tile{height:400px}
+  .stats-strip{grid-template-columns:repeat(2,1fr)}
+  .os-grid{grid-template-columns:repeat(2,1fr)}
+  .cs-stats{grid-template-columns:1fr}
+  .comp-tbl-wrap{font-size:12px}
+  .declare-section{height:580px}
+}
+
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="tb-brand">
+    <div class="tb-emblem"><svg viewBox="0 0 48 48" fill="none">
+<circle cx="24" cy="24" r="22" stroke="#9A7B1C" stroke-width="1.2" opacity="0.5"/>
+<ellipse cx="24" cy="13" rx="2.2" ry="4.8" fill="#B94A1C" opacity="0.9"/>
+<ellipse cx="24" cy="13" rx="2.2" ry="4.8" fill="#B94A1C" opacity="0.72" transform="rotate(45 24 24)"/>
+<ellipse cx="24" cy="13" rx="2.2" ry="4.8" fill="#B94A1C" opacity="0.72" transform="rotate(90 24 24)"/>
+<ellipse cx="24" cy="13" rx="2.2" ry="4.8" fill="#B94A1C" opacity="0.72" transform="rotate(135 24 24)"/>
+<ellipse cx="24" cy="13" rx="2.2" ry="4.8" fill="#B94A1C" opacity="0.72" transform="rotate(180 24 24)"/>
+<ellipse cx="24" cy="13" rx="2.2" ry="4.8" fill="#B94A1C" opacity="0.72" transform="rotate(225 24 24)"/>
+<ellipse cx="24" cy="13" rx="2.2" ry="4.8" fill="#B94A1C" opacity="0.72" transform="rotate(270 24 24)"/>
+<ellipse cx="24" cy="13" rx="2.2" ry="4.8" fill="#B94A1C" opacity="0.72" transform="rotate(315 24 24)"/>
+<circle cx="24" cy="24" r="6.5" fill="#9A7B1C"/>
+<text x="24" y="27.8" text-anchor="middle" font-family="serif" font-size="7" fill="#FDFAF4" font-weight="700">जि</text>
+<circle cx="24" cy="2.5" r="1.1" fill="#C9A227" transform="rotate(0 24 24)"/>
+<circle cx="24" cy="2.5" r="1.1" fill="#C9A227" transform="rotate(60 24 24)"/>
+<circle cx="24" cy="2.5" r="1.1" fill="#C9A227" transform="rotate(120 24 24)"/>
+<circle cx="24" cy="2.5" r="1.1" fill="#C9A227" transform="rotate(180 24 24)"/>
+<circle cx="24" cy="2.5" r="1.1" fill="#C9A227" transform="rotate(240 24 24)"/>
+<circle cx="24" cy="2.5" r="1.1" fill="#C9A227" transform="rotate(300 24 24)"/>
+</svg></div>
+    <div>
+      <div class="tb-name-hi">मैं जिला हूँ</div>
+      <div class="tb-name-en">India's District Knowledge Portal</div>
+    </div>
+    <div class="tb-sep"></div>
+    <div class="tb-ci">Conlang International</div>
+  </div>
+  <div class="tb-right">
+    <div class="tb-live"><div class="ldot"></div>LIVE DATA</div>
+    <div class="distsel">
+      <label>District</label>
+      <select id="dSel" onchange="changeDistrict(this.value)">
+        <option value="varanasi">Varanasi, Uttar Pradesh</option>
+        <option value="mysuru">Mysuru, Karnataka</option>
+        <option value="pune">Pune, Maharashtra</option>
+        <option value="jaipur">Jaipur, Rajasthan</option>
+        <option value="madurai">Madurai, Tamil Nadu</option>
+      </select>
+    </div>
+  </div>
+</div>
+
+<!-- TAB NAV -->
+<div class="tabnav">
+  <div class="tnav-inner">
+    <div class="tn on" onclick="switchPage('home','nt0')" id="nt0">🏡 Home</div>
+    <div class="tn" onclick="switchPage('portal','nt1')" id="nt1">🏛️ District Portal</div>
+    <div class="tn" onclick="switchPage('map','nt2')" id="nt2">🗺️ Heritage Map</div>
+    <div class="tn" onclick="switchPage('dash','nt3')" id="nt3">📊 Governance Dashboard</div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════ HOME PAGE ═══════════════════════════ -->
+<div class="page on" id="page-home">
+
+<!-- HERO — full viewport, Varanasi ghats at dawn -->
+<section class="hero-section">
+  <div class="hero-img-wrap">
+    <img class="hero-img" id="hero-bg-img"
+      src="https://images.unsplash.com/photo-1561361513-2d000a50f0dc?w=2400&q=90"
+      alt="Varanasi ghats at dawn — the living biography of India's districts">
+    <div class="hero-grad"></div>
+  </div>
+  <div class="hero-body">
+    <div class="hero-top-label">
+      <span class="htl-dot"></span>
+      India's District Knowledge Infrastructure Mission &nbsp;·&nbsp; Conlang International
+    </div>
+    <h1 class="hero-h1">
+      <span class="hero-deva">मैं जिला हूँ</span>
+      <span class="hero-en">The Living Biography<br>of India's Districts</span>
+    </h1>
+    <p class="hero-sub">780 districts. 5,000 years of history. The most comprehensive district-level cultural, heritage, and governance knowledge repository ever built for India — in seven simultaneous formats, for every Indian alive today and every generation that follows.</p>
+    <div class="hero-btns">
+      <button class="hbtn-primary" onclick="switchPage('portal','nt1')">
+        Explore a District <span class="hbtn-arrow">→</span>
+      </button>
+      <button class="hbtn-ghost" onclick="document.getElementById('h-about').scrollIntoView({behavior:'smooth'})">
+        About the Mission
+      </button>
+    </div>
+    <div class="hero-districts-row">
+      <span class="hdr-label">Featured</span>
+      <span class="hdr-pill" onclick="selectDistrict('varanasi')">Varanasi</span>
+      <span class="hdr-pill" onclick="selectDistrict('mysuru')">Mysuru</span>
+      <span class="hdr-pill" onclick="selectDistrict('pune')">Pune</span>
+      <span class="hdr-pill" onclick="selectDistrict('jaipur')">Jaipur</span>
+      <span class="hdr-pill" onclick="selectDistrict('madurai')">Madurai</span>
+    </div>
+  </div>
+  <div class="hero-scr-indicator">
+    <div class="hsi-line"></div>
+    <span>Scroll</span>
+  </div>
+</section>
+
+<!-- STATS STRIP -->
+<div class="stats-strip">
+  <div class="ss-item">
+    <div class="ss-n">780</div>
+    <div class="ss-l">Districts to Document</div>
+  </div>
+  <div class="ss-item">
+    <div class="ss-n">13</div>
+    <div class="ss-l">Content Volumes Per District</div>
+  </div>
+  <div class="ss-item">
+    <div class="ss-n">7</div>
+    <div class="ss-l">Output Formats Per District</div>
+  </div>
+  <div class="ss-item">
+    <div class="ss-n">5,000+</div>
+    <div class="ss-l">Years of Civilisation to Preserve</div>
+  </div>
+  <div class="ss-item">
+    <div class="ss-n">₹∞</div>
+    <div class="ss-l">Cultural Value — Incalculable</div>
+  </div>
+</div>
+
+<!-- ABOUT — full bleed image + editorial text -->
+<section class="about-section" id="h-about">
+  <div class="about-img-panel">
+    <img src="https://images.unsplash.com/photo-1530130285989-71c3c88abf7b?w=1400&q=90" alt="India — a nation of colours and civilisations" loading="lazy">
+    <div class="about-img-caption">India is not one story. It is 780 stories — told in 22 languages, across 28 states, over 5,000 years.</div>
+  </div>
+  <div class="about-text-panel">
+    <div class="atp-eyebrow">About the Initiative</div>
+    <h2 class="atp-h2">India Has Never Built the Infrastructure That Carries Its Soul</h2>
+    <p class="atp-p">India has built roads, railways, power grids, and broadband highways — the infrastructure that moves people and goods. But India has never systematically built the infrastructure that carries its civilisation.</p>
+    <p class="atp-p">Entire communities of craftspeople, farmers, musicians, wrestlers, weavers, and storytellers have lived and died without a single sentence written about them. Their knowledge — irreplaceable, unrepeatable — has gone with them into the earth. This is not a heritage crisis. It is a civilisational emergency.</p>
+    <p class="atp-p">Main Jila Hoon is India's answer. For every one of India's 780 districts, we build a complete knowledge ecosystem — documenting not just facts, but identity; not just history, but memory; not just what happened here, but who these people are, and what they will carry forward.</p>
+    <blockquote class="atp-quote">
+      "Every district speaks in its own first person.<br>
+      I am not a statistic. I am a civilisation.<br>
+      <em>मैं जिला हूँ।</em>"
+    </blockquote>
+  </div>
+</section>
+
+<!-- FIVE DISTRICTS — Full-bleed grid, large with real photographs -->
+<section class="districts-section">
+  <div class="ds-header">
+    <div class="ds-tag">Districts Documented</div>
+    <h2 class="ds-h2">Five Districts. Five Civilisations.<br>One Living Biography.</h2>
+    <p class="ds-sub">Click any district to enter its complete knowledge portal — history, heritage, people, nature, culture, flora & fauna, economy, and real-time governance intelligence.</p>
+  </div>
+  <div class="dt-grid" id="district-row"></div>
+</section>
+
+<!-- THE CRISIS — editorial full-width section -->
+<section class="crisis-section">
+  <div class="crisis-inner">
+    <div class="cs-left">
+      <div class="cs-tag">The Crisis Nobody Talks About</div>
+      <h2 class="cs-h2">Every Day We Wait,<br>Something Is Lost Forever</h2>
+      <div class="cs-stats">
+        <div class="css-item">
+          <div class="css-n">47,000+</div>
+          <div class="css-l">Oral traditions classified as endangered</div>
+        </div>
+        <div class="css-item">
+          <div class="css-n">12</div>
+          <div class="css-l">Craft traditions disappearing per year</div>
+        </div>
+        <div class="css-item">
+          <div class="css-n">60%</div>
+          <div class="css-l">Indian districts have no published heritage record</div>
+        </div>
+        <div class="css-item">
+          <div class="css-n">3,500</div>
+          <div class="css-l">Languages & dialects — many undocumented</div>
+        </div>
+      </div>
+    </div>
+    <div class="cs-right">
+      <img src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=900&q=85" alt="Indian heritage craft" loading="lazy">
+      <div class="cs-img-note">A Thatheri brass craftsman in Varanasi — his family's technique is 400 years old. Three masters remain.</div>
+    </div>
+  </div>
+</section>
+
+<!-- SEVEN OUTPUTS -->
+<section class="outputs-section">
+  <div class="os-wrap">
+    <div class="os-header">
+      <div class="os-tag">The Product Ecosystem</div>
+      <h2 class="os-h2">Not One Book. One Universe.</h2>
+      <p class="os-sub">Every district documented under Main Jila Hoon receives seven simultaneous output formats — physical and digital — together forming a permanent Heritage Cloud of India.</p>
+    </div>
+    <div class="os-grid">
+      <div class="os-item">
+        <div class="osi-num">01</div>
+        <div class="osi-ico">📖</div>
+        <div class="osi-title">Heritage Coffee Table Book</div>
+        <div class="osi-body">250–400 pages. Photographic. Curated. The book every household in the district will want on its shelf.</div>
+      </div>
+      <div class="os-item">
+        <div class="osi-num">02</div>
+        <div class="osi-ico">📚</div>
+        <div class="osi-title">District Encyclopedia</div>
+        <div class="osi-body">800–1,200 pages across 13 volumes. The definitive reference for schools, libraries, administrators.</div>
+      </div>
+      <div class="os-item">
+        <div class="osi-num">03</div>
+        <div class="osi-ico">🎬</div>
+        <div class="osi-title">Documentary Film</div>
+        <div class="osi-body">60–90 minutes. Cinema quality. First-person narration by the district itself.</div>
+      </div>
+      <div class="os-item">
+        <div class="osi-num">04</div>
+        <div class="osi-ico">🎙️</div>
+        <div class="osi-title">Podcast Series</div>
+        <div class="osi-body">20–50 episodes. Local voices. Deep dives. Oral tradition captured before it disappears.</div>
+      </div>
+      <div class="os-item">
+        <div class="osi-num">05</div>
+        <div class="osi-ico">💻</div>
+        <div class="osi-title">Digital Portal</div>
+        <div class="osi-body">Interactive. Searchable. GIS-integrated. With real-time governance intelligence. You are here.</div>
+      </div>
+      <div class="os-item">
+        <div class="osi-num">06</div>
+        <div class="osi-ico">🗺️</div>
+        <div class="osi-title">Heritage Map</div>
+        <div class="osi-body">Physical and digital. Tourism, education, and administrative use. Every heritage site GIS-pinned.</div>
+      </div>
+      <div class="os-item">
+        <div class="osi-num">07</div>
+        <div class="osi-ico">📊</div>
+        <div class="osi-title">Data Dashboard</div>
+        <div class="osi-body">Real-time governance indicators. Administrative intelligence. Scheme utilisation. SDG tracking.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SIX PILLARS — large editorial -->
+<section class="pillars-section">
+  <div class="ps-header">
+    <div class="ps-tag">The Six Pillars</div>
+    <h2 class="ps-h2">What Every District Gets</h2>
+  </div>
+  <div class="ps-grid">
+    <div class="ps-item">
+      <div class="psi-n">01</div>
+      <img class="psi-img" src="https://images.unsplash.com/photo-1561361513-2d000a50f0dc?w=600&q=80" alt="" loading="lazy">
+      <div class="psi-body">
+        <div class="psi-title">The Complete Physical Map</div>
+        <p class="psi-text">A district is not just an administrative boundary. It is a geological formation millions of years old — a river system, an agricultural ecology, a network of ancient trade routes. We map all of it.</p>
+      </div>
+    </div>
+    <div class="ps-item">
+      <div class="psi-n">02</div>
+      <img class="psi-img" src="https://images.unsplash.com/photo-1530130285989-71c3c88abf7b?w=600&q=80" alt="" loading="lazy">
+      <div class="psi-body">
+        <div class="psi-title">Cultural Narrative Infrastructure</div>
+        <p class="psi-text">Folk traditions, community narratives, living craft lineages, oral histories — the invisible architecture of local identity that survives in practice but not in print. We print it.</p>
+      </div>
+    </div>
+    <div class="ps-item">
+      <div class="psi-n">03</div>
+      <img class="psi-img" src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=600&q=80" alt="" loading="lazy">
+      <div class="psi-body">
+        <div class="psi-title">The Unsung — Finally Recorded</div>
+        <p class="psi-text">The seed guardian who saved 127 rice varieties. The teacher who taught 2,400 students in 43 years without recognition. The last master of a 400-year craft. We find them. We record them.</p>
+      </div>
+    </div>
+    <div class="ps-item">
+      <div class="psi-n">04</div>
+      <img class="psi-img" src="https://images.unsplash.com/photo-1549366021-9f761d040a94?w=600&q=80" alt="" loading="lazy">
+      <div class="psi-body">
+        <div class="psi-title">Flora, Fauna & Geography</div>
+        <p class="psi-text">Every district's ecological identity — its rivers, forests, endemic species, medicinal plant knowledge, and agricultural biodiversity — documented as heritage as important as any monument.</p>
+      </div>
+    </div>
+    <div class="ps-item">
+      <div class="psi-n">05</div>
+      <img class="psi-img" src="https://images.unsplash.com/photo-1605101100278-5d1deb2b6498?w=600&q=80" alt="" loading="lazy">
+      <div class="psi-body">
+        <div class="psi-title">Active Dissemination</div>
+        <p class="psi-text">Information in archives is archaeology. Information that lives in schools, homes, libraries, and tourism corridors is culture. Main Jila Hoon is designed for active public knowledge — not institutional storage.</p>
+      </div>
+    </div>
+    <div class="ps-item">
+      <div class="psi-n">06</div>
+      <img class="psi-img" src="https://images.unsplash.com/photo-1609137144813-7d9921338f24?w=600&q=80" alt="" loading="lazy">
+      <div class="psi-body">
+        <div class="psi-title">Civic Identity & Governance</div>
+        <p class="psi-text">A district whose citizens understand its history, resources, and potential is a district capable of better self-governance. Cultural pride, connected to civic participation, connected to development.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GLOBAL COMPARISON -->
+<section class="compare-section">
+  <div class="comp-wrap">
+    <div class="comp-hdr">
+      <div class="comp-tag">Global Context</div>
+      <h2 class="comp-h2">It Has Been Attempted.<br>Never at This Scale.</h2>
+      <p class="comp-sub">Six nations have built systematic district-level heritage documentation programmes. India can learn from all of them — and must surpass all, given the extraordinary scale, diversity, and depth of what it carries.</p>
+    </div>
+    <div class="comp-tbl-wrap">
+      <table class="comp-tbl">
+        <thead>
+          <tr>
+            <th>Country</th>
+            <th>Programme</th>
+            <th>Since</th>
+            <th>Scale</th>
+            <th>India's Learning</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>🇬🇧 England</td><td>Victoria County History</td><td>1899</td><td>39 counties, 260+ volumes</td><td>Parish-level depth; 125-year institutional continuity</td></tr>
+          <tr><td>🏴󠁧󠁢󠁳󠁣󠁴󠁿 Scotland</td><td>CANMORE / Historic Environment Scotland</td><td>1908</td><td>300,000+ records</td><td>Digital-first heritage cloud; community contribution model</td></tr>
+          <tr><td>🇫🇷 France</td><td>Inventaire Général du Patrimoine Culturel</td><td>1964</td><td>600,000+ objects documented</td><td>Ministry-driven systematic approach; public open database</td></tr>
+          <tr><td>🇯🇵 Japan</td><td>Living National Treasures — Ningen Kokuho</td><td>1950</td><td>National system across all prefectures</td><td>Protecting human carriers of tradition, not just objects</td></tr>
+          <tr><td>🇺🇸 USA</td><td>WPA Federal Writers' Project</td><td>1935</td><td>All 50 states, 150,000+ oral histories</td><td>Oral history as primary heritage; employment + documentation</td></tr>
+          <tr><td>🇰🇷 South Korea</td><td>Cultural Heritage Portal</td><td>2003</td><td>National digital system, all provinces</td><td>Legal mandate for local documentation; portal at scale</td></tr>
+          <tr class="india-row">
+            <td>🇮🇳 India</td>
+            <td><strong>Main Jila Hoon — मैं जिला हूँ</strong></td>
+            <td>2025</td>
+            <td><strong>780 districts — seven simultaneous formats</strong></td>
+            <td><strong>The most comprehensive local heritage mission ever attempted on earth</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- DECLARATION / CLOSING -->
+<section class="declare-section">
+  <div class="decl-bg">
+    <img src="https://images.unsplash.com/photo-1576487503208-9b83f3a85cf2?w=1800&q=90" alt="Ganga Aarti" loading="lazy">
+    <div class="decl-ov"></div>
+  </div>
+  <div class="decl-body">
+    <div class="decl-tag">The Declaration</div>
+    <p class="decl-quote">
+      "I am Banaras. I witnessed Buddha.<br>
+      I am Jaipur. An astronomer king built me from a dream.<br>
+      I am Madurai. I never slept while the world learned to write.<br>
+      I am Mysuru. Five centuries of Wadiyar grace shaped who I am.<br>
+      I am Pune. The Peshwas made me their capital. The freedom fighters made me their classroom.<br><br>
+      <strong>मैं जिला हूँ।<br>
+      I am a district. I am a civilisation. I speak for myself.</strong>"
+    </p>
+    <button class="decl-btn" onclick="switchPage('portal','nt1')">Enter the Portal →</button>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="sf-inner">
+    <div class="sf-brand">
+      <div class="sf-deva">मैं जिला हूँ</div>
+      <div class="sf-en">India's District Knowledge Infrastructure Mission</div>
+      <div class="sf-ci">A Conlang International Initiative</div>
+    </div>
+    <div class="sf-mid">
+      <div class="sf-col-h">Explore</div>
+      <div class="sf-links">
+        <span onclick="switchPage('portal','nt1')">District Portal</span>
+        <span onclick="switchPage('map','nt2')">Heritage Map</span>
+        <span onclick="switchPage('dash','nt3')">Governance Dashboard</span>
+      </div>
+    </div>
+    <div class="sf-note">
+      Built with civilisational responsibility.<br>
+      For every generation that comes after.
+    </div>
+  </div>
+</footer>
+
+</div>
+
+
+<!-- DISTRICT PORTAL -->
+<div class="page" id="page-portal">
+  <div class="portal-wrap">
+    <aside class="sb">
+      <div class="sb-photo">
+        <img id="sb-img" src="https://images.unsplash.com/photo-1561361513-2d000a50f0dc?w=600&q=80" alt="">
+        <div class="sb-photo-ov"></div>
+        <div class="sb-photo-txt">
+          <div class="sp-name" id="sb-name">Varanasi</div>
+          <div class="sp-hi" id="sb-hi">वाराणसी · काशी</div>
+          <div class="sp-state" id="sb-state">Uttar Pradesh · Est. c. 800 BCE</div>
+        </div>
+      </div>
+      <div class="sb-kpis" id="sb-kpis-grid">
+        <div class="sb-kpi"><div class="sbk-n">38.14L</div><div class="sbk-l">Population</div></div>
+        <div class="sb-kpi"><div class="sbk-n">1,578</div><div class="sbk-l">Villages</div></div>
+        <div class="sb-kpi"><div class="sbk-n">8</div><div class="sbk-l">Tehsils</div></div>
+        <div class="sb-kpi"><div class="sbk-n">4,600+</div><div class="sbk-l">Yrs History</div></div>
+      </div>
+      <div class="sb-srch"><span class="sb-srch-ic">🔍</span><input type="text" placeholder="Search…" oninput="searchFilter(this.value)"></div>
+      <div class="sb-grp">
+        <div class="sb-grp-h">Explore</div>
+        <div class="sbn on" onclick="showPanel('overview',this)"><span class="ni">🏠</span>Overview</div>
+        <div class="sbn" onclick="showPanel('history',this)"><span class="ni">📜</span>History &amp; Timeline<span class="nc">84</span></div>
+        <div class="sbn" onclick="showPanel('heritage',this)"><span class="ni">🕌</span>Heritage Sites<span class="nc">127</span></div>
+        <div class="sbn" onclick="showPanel('geography',this)"><span class="ni">🌿</span>Geography, Flora &amp; Fauna</div>
+        <div class="sbn" onclick="showPanel('people',this)"><span class="ni">👤</span>Famous People<span class="nc">340</span></div>
+        <div class="sbn" onclick="showPanel('stories',this)"><span class="ni">📖</span>Famous Stories<span class="nc">92</span></div>
+      </div>
+      <div class="sb-grp">
+        <div class="sb-grp-h">Community &amp; Culture</div>
+        <div class="sbn" onclick="showPanel('culture',this)"><span class="ni">🎭</span>Fairs &amp; Traditions<span class="nc">56</span></div>
+        <div class="sbn" onclick="showPanel('living',this)"><span class="ni">🛖</span>Living District<span class="nc">68</span></div>
+        <div class="sbn" onclick="showPanel('economy',this)"><span class="ni">🌾</span>Economy &amp; Craft<span class="nc">43</span></div>
+        <div class="sbn" onclick="showPanel('heroes',this)"><span class="ni">⭐</span>Unsung Heroes<span class="nc">215</span></div>
+        <div class="sbn" onclick="showPanel('women',this)"><span class="ni">🌺</span>Key Women<span class="nc">89</span></div>
+        <div class="sbn" onclick="showPanel('today',this)"><span class="ni">🚀</span>District Today<span class="nc">34</span></div>
+        <div class="sbn" onclick="showPanel('future',this)"><span class="ni">🔭</span>Vision 2047</div>
+      </div>
+    </aside>
+    <main class="pmain">
+      <div class="cpanel on" id="p-overview"></div>
+      <div class="cpanel" id="p-history"></div>
+      <div class="cpanel" id="p-heritage"></div>
+      <div class="cpanel" id="p-geography"></div>
+      <div class="cpanel" id="p-people"></div>
+      <div class="cpanel" id="p-stories"></div>
+      <div class="cpanel" id="p-culture"></div>
+      <div class="cpanel" id="p-living"></div>
+      <div class="cpanel" id="p-economy"></div>
+      <div class="cpanel" id="p-heroes"></div>
+      <div class="cpanel" id="p-women"></div>
+      <div class="cpanel" id="p-today"></div>
+      <div class="cpanel" id="p-future"></div>
+    </main>
+  </div>
+</div>
+
+<!-- MAP -->
+<div class="page" id="page-map">
+  <div class="map-layout">
+    <div class="gmap-wrap">
+      <div id="gmap"></div>
+      <div class="map-ctrl">
+        <div class="mc-card">
+          <div class="mc-t">Heritage Layers</div>
+          <span class="fb on" onclick="toggleFilter(this,'temple')">🕌 Religious</span>
+          <span class="fb on" onclick="toggleFilter(this,'ghat')">🌊 Ghats</span>
+          <span class="fb on" onclick="toggleFilter(this,'buddhist')">☸️ Buddhist</span>
+          <span class="fb on" onclick="toggleFilter(this,'fort')">🏰 Forts</span>
+          <span class="fb on" onclick="toggleFilter(this,'edu')">🎓 Knowledge</span>
+          <span class="fb on" onclick="toggleFilter(this,'craft')">🪡 Craft</span>
+          <span class="fb on" onclick="toggleFilter(this,'nature')">🌿 Nature</span>
+        </div>
+      </div>
+      <div class="map-bottom">
+        <div><div class="mb-n">127</div><div class="mb-l">Heritage Sites</div></div>
+        <div><div class="mb-n">84</div><div class="mb-l">Ghats</div></div>
+        <div><div class="mb-n">23</div><div class="mb-l">ASI Protected</div></div>
+      </div>
+    </div>
+    <div class="map-side">
+      <div class="ms-h" id="map-title">Heritage Map — Varanasi</div>
+      <div>
+        <div class="ms-lr"><div class="ms-lr-l">🕌 Religious Heritage</div><div class="tog on" onclick="this.classList.toggle('on')"></div></div>
+        <div class="ms-lr"><div class="ms-lr-l">🌊 Rivers &amp; Ghats</div><div class="tog on" onclick="this.classList.toggle('on')"></div></div>
+        <div class="ms-lr"><div class="ms-lr-l">☸️ Buddhist Circuits</div><div class="tog on" onclick="this.classList.toggle('on')"></div></div>
+        <div class="ms-lr"><div class="ms-lr-l">🏰 Forts &amp; Monuments</div><div class="tog on" onclick="this.classList.toggle('on')"></div></div>
+        <div class="ms-lr"><div class="ms-lr-l">🎓 Knowledge Institutions</div><div class="tog on" onclick="this.classList.toggle('on')"></div></div>
+        <div class="ms-lr"><div class="ms-lr-l">🪡 Craft Zones</div><div class="tog" onclick="this.classList.toggle('on')"></div></div>
+        <div class="ms-lr"><div class="ms-lr-l">🌿 Nature &amp; Sanctuaries</div><div class="tog on" onclick="this.classList.toggle('on')"></div></div>
+      </div>
+      <div class="ms-sites"><div class="ms-sh">All Heritage Sites</div><div id="map-site-list"></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- DASHBOARD -->
+<div class="page" id="page-dash">
+  <div class="dash">
+    <div class="dash-head">
+      <div><div class="dh-t" id="dash-title">Varanasi — Governance Intelligence</div><div class="dh-s">District Collector · Administrative Intelligence · Real-time Feed</div></div>
+      <div class="dh-r"><div class="dh-ts" id="dash-time">—</div><div class="dh-lv"><div class="ldot"></div>LIVE FEED</div></div>
+    </div>
+    <div class="kstrip">
+      <div class="kpi ks"><div class="k-ic">👥</div><div class="k-vl" id="kpi-pop">—</div><div class="k-lb">Population</div><div class="k-tr up">↑ growth</div></div>
+      <div class="kpi kn"><div class="k-ic">📚</div><div class="k-vl" id="kpi-lit">—</div><div class="k-lb">Literacy Rate</div><div class="k-tr up">↑ decade</div></div>
+      <div class="kpi kg"><div class="k-ic">💰</div><div class="k-vl" id="kpi-bud">—</div><div class="k-lb">Annual Budget</div><div class="k-tr up">↑ FY25</div></div>
+      <div class="kpi kf"><div class="k-ic">🌾</div><div class="k-vl" id="kpi-agr">—</div><div class="k-lb">Crop Coverage</div><div class="k-tr dn">drought watch</div></div>
+      <div class="kpi kr"><div class="k-ic">🏛️</div><div class="k-vl" id="kpi-pan">—</div><div class="k-lb">Active Panchayats</div><div class="k-tr up">↑ coverage</div></div>
+    </div>
+    <div class="drow r3">
+      <div class="dc"><div class="dc-h"><div class="dc-t">Scheme Utilisation</div><span class="dc-b dbg">FY 2024–25</span></div><div class="dc-body"><div class="bars" id="scheme-bars"></div></div></div>
+      <div class="dc"><div class="dc-h"><div class="dc-t">SDG Progress</div><span class="dc-b dbb">2030 Targets</span></div><div class="dc-body"><div class="rings" id="sdg-rings"></div></div></div>
+      <div class="dc"><div class="dc-h"><div class="dc-t">Live Alerts</div><span class="dc-b dbr">Active</span></div><div class="dc-body"><div class="alerts" id="alerts-list"></div></div></div>
+    </div>
+    <div class="dc" style="margin-bottom:12px">
+      <div class="dc-h"><div class="dc-t">Government Offices — MP · MLA · DM · SP · CMO · Panchayat with Google Maps</div><span class="dc-b dbo">Key Contacts</span></div>
+      <div class="dc-body"><div class="ogrid" id="offices"></div></div>
+    </div>
+    <div class="drow r21">
+      <div class="dc"><div class="dc-h"><div class="dc-t">Block-wise Development Index</div><span class="dc-b dbo">All Blocks</span></div><div class="dc-body" style="padding:0"><table class="dtbl" id="block-tbl"></table></div></div>
+      <div class="dc"><div class="dc-h"><div class="dc-t">Governance Scores</div><span class="dc-b dbb">Q2 2025</span></div><div class="dc-body"><div class="gauges" id="gov-gauges"></div></div></div>
+    </div>
+    <div class="drow r12">
+      <div class="dc"><div class="dc-h"><div class="dc-t">Activity Feed</div></div><div class="dc-body"><div class="act" id="activity"></div></div></div>
+      <div class="dc"><div class="dc-h"><div class="dc-t">Heritage Conservation</div><span class="dc-b dbs">All Sites</span></div><div class="dc-body" style="padding:0"><table class="dtbl" id="con-tbl"></table></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL -->
+<div class="modal-bg" id="modal-bg" onclick="closeModal(event)">
+  <div class="modal-box">
+    <div class="m-photo">
+      <img id="m-img" src="" alt="">
+      <div class="m-photo-ov"></div>
+      <div class="m-photo-txt">
+        <div class="m-sub" id="m-sub">—</div>
+        <div class="m-title" id="m-title">—</div>
+      </div>
+      <button class="m-close" onclick="closeModal()">✕</button>
+    </div>
+    <div class="m-body">
+      <div class="m-tags" id="m-tags"></div>
+      <div class="m-desc" id="m-desc"></div>
+      <div class="m-facts" id="m-facts"></div>
+      <a class="m-gmbtn" id="m-gmbtn" href="#" target="_blank" rel="noopener">📍 View on Google Maps — Get Directions</a>
+    </div>
+  </div>
+</div>
+
+<script>
+const DIST={
+varanasi:{name:"Varanasi",hi:"वाराणसी · काशी · बनारस",state:"Uttar Pradesh · Est. c. 800 BCE",tagline:"I witnessed Buddha at Sarnath. I nurtured Kabir's verses. I watched the Ganga shape civilisations.",img:"https://images.unsplash.com/photo-1561361513-2d000a50f0dc?w=600&q=80",heroImg:"https://images.unsplash.com/photo-1561361513-2d000a50f0dc?w=1800&q=85",bannerImg:"https://images.unsplash.com/photo-1599661046827-dacff0c0f09a?w=1200&q=80",pop:"38.14L",vil:"1,578",teh:"8",hist:"4,600+ Yrs",kpi:{pop:"38.14L",lit:"76.83%",bud:"₹2,847Cr",agr:"68.4%",pan:"1,234"},dt:"Varanasi — Governance Intelligence",lat:25.3176,lng:82.9739,area:"1,535 km²",blocks:"15",river:"Ganga · Varuna · Assi",ghats:"84",
+geography:"Varanasi sits on the crescent-shaped western bank of the Ganga in the Middle Gangetic Plain, bounded by the Varuna river to the north and the Assi stream to the south. The terrain is flat alluvial plain — fertile, flood-prone, and continuously shaped over millennia by the great river. The district averages 75–80 metres above sea level. The floodplain soil is among the most productive in India, sustaining intensive agriculture across 8 blocks.",
+flora:[{ico:"🌸",nm:"Champak (Magnolia champaca)",sub:"Fragrant temple flower — grown along all 84 ghats",tag:"Sacred",ftt:"fft-g"},{ico:"🌿",nm:"Tulsi (Ocimum tenuiflorum)",sub:"Holy basil — grown in every household's courtyard",tag:"Sacred",ftt:"fft-g"},{ico:"🎋",nm:"Bamboo Groves",sub:"Dense riparian bamboo along the Varuna riverbanks",tag:"Riparian",ftt:"fft-g"},{ico:"🌺",nm:"Kadam (Neolamarckia cadamba)",sub:"Monsoon tree — associated with Krishna's lore",tag:"Cultural",ftt:"fft-g"},{ico:"🌾",nm:"Rice & Wheat",sub:"Dual-crop alluvial farming dominates the district",tag:"Agricultural",ftt:"fft-g"},{ico:"🪷",nm:"Lotus (Nelumbo nucifera)",sub:"Sacred — found in ghat pools and temple tanks",tag:"Sacred",ftt:"fft-g"}],
+fauna:[{ico:"🐬",nm:"Gangetic River Dolphin",sub:"Platanista gangetica — nationally protected, critically endangered",tag:"Endangered",ftt:"fft-r"},{ico:"🐢",nm:"Ganges Softshell Turtle",sub:"Aspideretes gangeticus — protected under Wildlife Protection Act",tag:"Protected",ftt:"fft-r"},{ico:"🦅",nm:"Brahminy Kite",sub:"Haliastur indus — sacred raptor seen above all 84 ghats",tag:"Common",ftt:"fft-e"},{ico:"🦩",nm:"Sarus Crane",sub:"World's tallest flying bird — seasonal wetland visitor",tag:"Migratory",ftt:"fft-g"},{ico:"🐊",nm:"Mugger Crocodile",sub:"Crocodylus palustris — occasional Ganga visitor",tag:"Monitored",ftt:"fft-r"},{ico:"🦋",nm:"Common Mormon Butterfly",sub:"Papilio polytes — found in temple gardens and old city lanes",tag:"Common",ftt:"fft-e"}]
+},
+mysuru:{name:"Mysuru",hi:"ಮೈಸೂರು · मैसूरु",state:"Karnataka · Royal Capital since 1399",tagline:"I nurtured Carnatic music and gave India its sandalwood crown. Five centuries of Wadiyar grace shaped who I am.",img:"https://images.unsplash.com/photo-1582510003544-4d00b7f74220?w=600&q=80",heroImg:"https://images.unsplash.com/photo-1582510003544-4d00b7f74220?w=1800&q=85",bannerImg:"https://images.unsplash.com/photo-1582510003544-4d00b7f74220?w=1200&q=80",pop:"30.01L",vil:"2,564",teh:"6",hist:"600+ Yrs",kpi:{pop:"30.01L",lit:"72.96%",bud:"₹2,100Cr",agr:"74.2%",pan:"980"},dt:"Mysuru — Governance Intelligence",lat:12.2958,lng:76.6394,area:"6,854 km²",blocks:"11",river:"Kabini · Cauvery · Hemavathi",ghats:"N/A",
+geography:"Mysuru lies on the southern Deccan Plateau at an elevation of 763 metres. The Western Ghats form a dramatic wall to the west, feeding the Kabini and Cauvery river systems. The landscape transitions from dense Nagarhole forest in the west to fertile agricultural plains eastward. The district has some of India's highest-quality tropical dry forests, home to tigers and elephants.",
+flora:[{ico:"🌳",nm:"Sandalwood (Santalum album)",sub:"GI-tagged Mysore sandalwood — world-famous for fragrance",tag:"GI Tagged",ftt:"fft-g"},{ico:"🌸",nm:"Mysore Mallige Jasmine",sub:"Jasminum sambac — world-renowned Mysuru variety, GI-tagged",tag:"GI Tagged",ftt:"fft-g"},{ico:"🌿",nm:"Rosewood (Dalbergia latifolia)",sub:"Prized timber of the Deccan — protected species",tag:"Protected",ftt:"fft-r"},{ico:"🎋",nm:"Bamboo Forests",sub:"Dense bamboo in Western Ghats foothills — major resource",tag:"Forest",ftt:"fft-g"},{ico:"🌺",nm:"Coffee & Spice Gardens",sub:"Shade-grown arabica in Nagarhole periphery zones",tag:"Agricultural",ftt:"fft-g"},{ico:"🌲",nm:"Teak (Tectona grandis)",sub:"Planted teak across Nagarhole plantation zones",tag:"Timber",ftt:"fft-g"}],
+fauna:[{ico:"🐘",nm:"Asian Elephant",sub:"Elephas maximus — Nagarhole National Park, significant population",tag:"Protected",ftt:"fft-r"},{ico:"🐆",nm:"Indian Leopard",sub:"Panthera pardus fusca — Nagarhole and Bandipur corridor",tag:"Endangered",ftt:"fft-r"},{ico:"🦅",nm:"Crested Serpent Eagle",sub:"Spilornis cheela — common in Western Ghats forest patches",tag:"Common",ftt:"fft-e"},{ico:"🦌",nm:"Spotted Deer (Chital)",sub:"Axis axis — abundant in Nagarhole grasslands",tag:"Common",ftt:"fft-e"},{ico:"🐅",nm:"Bengal Tiger",sub:"Panthera tigris tigris — Nagarhole Tiger Reserve (Project Tiger)",tag:"Endangered",ftt:"fft-r"},{ico:"🦤",nm:"Malabar Trogon",sub:"Harpactes fasciatus — Western Ghats endemic, rare sighting",tag:"Rare",ftt:"fft-r"}]
+},
+pune:{name:"Pune",hi:"पुणे · Poona",state:"Maharashtra · Est. c. 1st century CE",tagline:"I was the Peshwa capital. I trained freedom fighters. I became India's education and technology nerve centre.",img:"https://images.unsplash.com/photo-1567157577867-05ccb1388e66?w=600&q=80",heroImg:"https://images.unsplash.com/photo-1567157577867-05ccb1388e66?w=1800&q=85",bannerImg:"https://images.unsplash.com/photo-1567157577867-05ccb1388e66?w=1200&q=80",pop:"94.29L",vil:"1,866",teh:"14",hist:"2,000+ Yrs",kpi:{pop:"94.29L",lit:"86.15%",bud:"₹5,200Cr",agr:"62.1%",pan:"1,400"},dt:"Pune — Governance Intelligence",lat:18.5204,lng:73.8567,area:"15,643 km²",blocks:"13",river:"Mula · Mutha · Bhima · Indrayani",ghats:"N/A",
+geography:"Pune sits on the eastern fringe of the Western Ghats (Sahyadri range) at 560 metres elevation. The Mula-Mutha river system drains the city. The terrain contrasts dramatically — rugged Sahyadri ridges with ancient hill forts to the west, opening into the broad Deccan plateau eastward. The district has 13 blocks spanning monsoon forest, dry scrubland, and fertile river valleys.",
+flora:[{ico:"🌺",nm:"Karvi (Strobilanthes callosus)",sub:"Blooms once in 7 years — creates a mass Sahyadri spectacle",tag:"Rare",ftt:"fft-r"},{ico:"🌳",nm:"Wild Fig (Ficus benghalensis)",sub:"Ancient banyans across Peshwa-era gardens and forts",tag:"Heritage",ftt:"fft-g"},{ico:"🌿",nm:"Hirda (Terminalia chebula)",sub:"Ayurvedic triphala fruit tree of the Sahyadri",tag:"Medicinal",ftt:"fft-g"},{ico:"🌾",nm:"Jowar & Bajra",sub:"Traditional dryland crops of the Deccan plateau",tag:"Agricultural",ftt:"fft-g"},{ico:"🎋",nm:"Wild Bamboo",sub:"Dense bamboo across Sahyadri gorges and river banks",tag:"Forest",ftt:"fft-g"},{ico:"🌸",nm:"Parijata (Nyctanthes arbor-tristis)",sub:"Night-flowering sacred tree — falls at dawn for worship",tag:"Sacred",ftt:"fft-g"}],
+fauna:[{ico:"🐆",nm:"Indian Leopard",sub:"Panthera pardus — Sinhagad and Sahyadri reserve sightings",tag:"Endangered",ftt:"fft-r"},{ico:"🦅",nm:"Crested Hawk-Eagle",sub:"Nisaetus cirrhatus — Sahyadri forest edge raptor",tag:"Rare",ftt:"fft-r"},{ico:"🦎",nm:"Indian Star Tortoise",sub:"Geochelone elegans — Deccan grasslands, Schedule IV",tag:"Protected",ftt:"fft-r"},{ico:"🦊",nm:"Indian Fox",sub:"Vulpes bengalensis — common across Pune's rural periphery",tag:"Common",ftt:"fft-e"},{ico:"🦋",nm:"Malabar Banded Peacock",sub:"Papilio buddha — Western Ghats endemic butterfly",tag:"Endemic",ftt:"fft-r"},{ico:"🐒",nm:"Bonnet Macaque",sub:"Macaca radiata — urban-forest interface, adaptable",tag:"Common",ftt:"fft-e"}]
+},
+jaipur:{name:"Jaipur",hi:"जयपुर · गुलाबी नगर",state:"Rajasthan · Founded 1727 CE",tagline:"I was built by an astronomer king. My pink walls hold centuries of Rajput courage, artisan genius, and desert wisdom.",img:"https://images.unsplash.com/photo-1477587458883-47145ed94245?w=600&q=80",heroImg:"https://images.unsplash.com/photo-1477587458883-47145ed94245?w=1800&q=85",bannerImg:"https://images.unsplash.com/photo-1484218475094-a88b2f2f6238?w=1200&q=80",pop:"66.63L",vil:"2,124",teh:"13",hist:"300+ Yrs (3,000+ pre-Jaipur)",kpi:{pop:"66.63L",lit:"75.51%",bud:"₹3,800Cr",agr:"55.3%",pan:"1,200"},dt:"Jaipur — Governance Intelligence",lat:26.9124,lng:75.7873,area:"11,152 km²",blocks:"13",river:"Banas · Banganga · Dhund",ghats:"N/A",
+geography:"Jaipur lies in the semi-arid Thar Desert transition zone. The Aravalli hills form a natural barrier to the southwest — one of the world's oldest mountain ranges. The terrain is flat to gently undulating with rocky outcrops. Jai Singh II designed the city with sophisticated step-well and tank water harvesting systems in 1727. Rainfall is seasonal and scarce (600mm/year). The Banas river drains the eastern portions of the district.",
+flora:[{ico:"🌳",nm:"Khejri (Prosopis cineraria)",sub:"State tree of Rajasthan — survives extreme drought",tag:"State Tree",ftt:"fft-g"},{ico:"🌺",nm:"Rohida (Tecomella undulata)",sub:"State flower of Rajasthan — vibrant desert bloom",tag:"State Flower",ftt:"fft-g"},{ico:"🌵",nm:"Cactus & Euphorbias",sub:"Succulent scrub characteristic of Thar transition zone",tag:"Desert",ftt:"fft-e"},{ico:"🌿",nm:"Ber (Ziziphus mauritiana)",sub:"Drought-hardy fruit tree of the semi-arid plains",tag:"Hardy",ftt:"fft-g"},{ico:"🌾",nm:"Bajra (Pearl Millet)",sub:"Principal food crop of semi-arid Jaipur for 3,000 years",tag:"Agricultural",ftt:"fft-g"},{ico:"🌸",nm:"Marigold (Tagetes)",sub:"Temple offerings — the dominant ornamental crop",tag:"Cultural",ftt:"fft-g"}],
+fauna:[{ico:"🦚",nm:"Indian Peacock",sub:"Pavo cristatus — National Bird, abundant and revered",tag:"National Bird",ftt:"fft-e"},{ico:"🐆",nm:"Indian Leopard",sub:"Panthera pardus — Jhalana Leopard Reserve, urban forest",tag:"Protected",ftt:"fft-r"},{ico:"🦅",nm:"Laggar Falcon",sub:"Falco jugger — open country raptor, Aravalli foothills",tag:"Rare",ftt:"fft-r"},{ico:"🦌",nm:"Indian Gazelle (Chinkara)",sub:"Gazella bennettii — Nahargarh buffer zone sightings",tag:"Protected",ftt:"fft-r"},{ico:"🐒",nm:"Hanuman Langur",sub:"Semnopithecus entellus — abundant in forested hillocks",tag:"Sacred",ftt:"fft-e"},{ico:"🦎",nm:"Monitor Lizard",sub:"Varanus bengalensis — rocky Aravalli outcrops throughout",tag:"Common",ftt:"fft-e"}]
+},
+madurai:{name:"Madurai",hi:"மதுரை · मदुरई",state:"Tamil Nadu · Est. c. 3rd century BCE",tagline:"I never slept. I sang Tamil Sangam poetry while the rest of the world was still learning to write.",img:"https://images.unsplash.com/photo-1623605931891-d5b95ee98459?w=600&q=80",heroImg:"https://images.unsplash.com/photo-1623605931891-d5b95ee98459?w=1800&q=85",bannerImg:"https://images.unsplash.com/photo-1623605931891-d5b95ee98459?w=1200&q=80",pop:"30.38L",vil:"640",teh:"13",hist:"3,000+ Yrs",kpi:{pop:"30.38L",lit:"80.64%",bud:"₹1,900Cr",agr:"70.8%",pan:"760"},dt:"Madurai — Governance Intelligence",lat:9.9252,lng:78.1198,area:"3,741 km²",blocks:"13",river:"Vaigai · Suruli · Manjalar",ghats:"N/A",
+geography:"Madurai is set in the Vaigai river basin in south-central Tamil Nadu at 101 metres elevation. The terrain is largely flat, bordered by the Western Ghats to the west (Anamalai range) and Eastern Ghats to the northeast. The Vaigai river bisects the district. The Alagar hills to the northeast are a prominent ecological landmark with sandalwood groves. Climate is tropical hot semi-arid, with the city famous for its extreme summer heat.",
+flora:[{ico:"🌺",nm:"Madurai Malli (Mullai Jasmine)",sub:"GI-tagged Madurai jasmine — world-famous, trade hub",tag:"GI Tagged",ftt:"fft-g"},{ico:"🌳",nm:"Punnai (Calophyllum inophyllum)",sub:"Coastal and riverine Tamil Nadu tree — medicinal oil",tag:"Native",ftt:"fft-g"},{ico:"🌿",nm:"Neem (Azadirachta indica)",sub:"Sacred and medicinal — planted on every traditional street",tag:"Sacred",ftt:"fft-g"},{ico:"🌸",nm:"Kadamba (Neolamarckia cadamba)",sub:"Temple tree of Lord Murugan — grows in temple tanks",tag:"Sacred",ftt:"fft-g"},{ico:"🌾",nm:"Rice & Banana",sub:"Vaigai delta agriculture — surplus growing district",tag:"Agricultural",ftt:"fft-g"},{ico:"🪴",nm:"Sandalwood",sub:"Alagar hills — natural sandal groves (declining, protected)",tag:"Protected",ftt:"fft-r"}],
+fauna:[{ico:"🦅",nm:"Brahminy Kite",sub:"Haliastur indus — abundant and sacred to Vaishnavites",tag:"Common",ftt:"fft-e"},{ico:"🦚",nm:"Indian Peacock",sub:"Pavo cristatus — Alagar hills and rural outskirts",tag:"Common",ftt:"fft-e"},{ico:"🐢",nm:"Indian Star Tortoise",sub:"Geochelone elegans — Eastern Ghats scrubland",tag:"Protected",ftt:"fft-r"},{ico:"🐒",nm:"Bonnet Macaque",sub:"Macaca radiata — Alagar Koil temple population, managed",tag:"Sacred",ftt:"fft-e"},{ico:"🦩",nm:"Purple Heron",sub:"Ardea purpurea — Vaigai riverbanks, seasonal visitor",tag:"Migratory",ftt:"fft-g"},{ico:"🦋",nm:"Common Birdwing",sub:"Troides helena — large butterfly in Anamalai edge habitats",tag:"Rare",ftt:"fft-r"}]
+}
+};
+
+const ALL={
+varanasi:{
+heritage:[
+{nm:"Kashi Vishwanath Temple",tp:"ASI PROTECTED",cat:"temple",pr:"11th c. (rebuilt 1780)",st:"Active worship",lat:25.3109,lng:83.0107,img:"https://images.unsplash.com/photo-1593693411515-c20261bcad6e?w=400&q=75",de:"One of the twelve Jyotirlingas of Shiva. The gold-spired structure was built by Ahilyabai Holkar in 1780. The Kashi Vishwanath Corridor project has expanded the complex. Ranjit Singh donated the gold plating in 1835.",fa:{Period:"11th c. rebuilt 1780",Condition:"Excellent",Visitors:"~3 lakh/month",Authority:"ASI + KV Trust"}},
+{nm:"Sarnath",tp:"UNESCO TENTATIVE",cat:"buddhist",pr:"c. 528 BCE",st:"Museum + Excavation",lat:25.3798,lng:83.0238,img:"https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&q=75",de:"Where the Buddha delivered his first sermon after attaining enlightenment. The Dhamek Stupa (500 CE) and the Ashoka Pillar — whose Lion Capital is India's national emblem — make this among the world's most significant archaeological sites.",fa:{Period:"c. 528 BCE",Condition:"Good",Visitors:"~1.5 lakh/month",Authority:"ASI"}},
+{nm:"Dashashwamedh Ghat",tp:"LIVING HERITAGE",cat:"ghat",pr:"Ancient — rebuilt 1748",st:"Daily Aarti active",lat:25.3053,lng:83.0128,img:"https://images.unsplash.com/photo-1561625116-f5b6c23a68e0?w=400&q=75",de:"The most sacred ghat in Varanasi. Site of the spectacular nightly Ganga Aarti — five head priests, fire, conch shells, hundreds of oil lamps — performed unbroken for centuries.",fa:{Period:"Ancient (rebuilt 1748)",Condition:"Excellent",Visitors:"~5 lakh/month"}},
+{nm:"Ramnagar Fort & Museum",tp:"STATE PROTECTED",cat:"fort",pr:"1750 CE",st:"Museum Open",lat:25.2777,lng:83.0332,img:"https://images.unsplash.com/photo-1599661046289-e31897846e41?w=400&q=75",de:"Built in 1750 by Raja Balwant Singh. Houses the Maharaja's residence and a remarkable museum of ancient armoury, vintage cars, and astronomical clocks. HQ of the month-long Ramnagar Ramlila.",fa:{Period:"1750 CE",Condition:"Fair — restoration ongoing",Unique:"HQ of UNESCO Ramnagar Ramlila"}},
+{nm:"Banaras Hindu University",tp:"NATIONAL IMPORTANCE",cat:"edu",pr:"Founded 1916",st:"Active — 30,000+ community",lat:25.2677,lng:82.9913,img:"https://images.unsplash.com/photo-1519452575417-564c1401ecc0?w=400&q=75",de:"Founded by Pt. Madan Mohan Malaviya in 1916. Asia's largest residential university at 1,300 acres. Contains the Vishwanath Temple, Museum, and institutions across arts, science, engineering, and medicine.",fa:{Founded:"1916",Community:"30,000+ students & faculty",Unique:"Asia's largest residential university"}},
+{nm:"Thatheri Bazar Craft Zone",tp:"UNESCO ICH",cat:"craft",pr:"Ancient tradition",st:"500+ artisans active",lat:25.3077,lng:83.0023,img:"https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=400&q=75",de:"The Thatheri community maintains a brass and copper metalwork tradition listed by UNESCO as Intangible Cultural Heritage (2014). Traditional hammering techniques unchanged for centuries.",fa:{UNESCO:"Listed 2014",Artisans:"500+ active"}},
+{nm:"Manikarnika Ghat",tp:"LIVING HERITAGE",cat:"ghat",pr:"Ancient — 3,500+ years",st:"Active 24/7",lat:25.3084,lng:83.0104,img:"https://images.unsplash.com/photo-1566559532215-41f32e9c8eb7?w=400&q=75",de:"The holiest cremation ground in Hinduism — burning continuously for an estimated 3,500 years. The Dom community tends the sacred fire across generations. Hindus believe cremation here guarantees moksha.",fa:{Period:"Ancient — 3,500+ years continuous",Unique:"The fire that never goes out"}}],
+people:[
+{ico:"🙏",nm:"Kabir Das",rl:"Saint-Poet · 1440–1518",tg:"SAINT",tc:"rgba(185,74,28,.12)",tv:"#B94A1C",de:"The weaver-saint whose dohas dissolved caste, religion, and language into universal humanity. Born in Varanasi, claimed by Hindus, Muslims, and Sikhs alike. The most quoted poet in daily Indian speech."},
+{ico:"✍️",nm:"Goswami Tulsidas",rl:"Poet · 1532–1623",tg:"LITERARY",tc:"rgba(10,22,40,.1)",tv:"#0A1628",de:"Author of the Ramcharitmanas — the most-read text in North India after the Ramayana itself. Spent much of his life in Varanasi, completing the work at the Tulsighat."},
+{ico:"🎵",nm:"Pandit Ravi Shankar",rl:"Sitar Maestro · 1920–2012",tg:"ARTIST",tc:"rgba(154,123,28,.1)",tv:"#9A7B1C",de:"Took Varanasi's classical tradition to the global stage. Three Grammy Awards. Bharat Ratna. Mentored George Harrison. Born in Varanasi, trained in its classical tradition."},
+{ico:"🏛️",nm:"Pt. Madan Mohan Malaviya",rl:"Freedom Fighter · 1861–1946",tg:"FREEDOM",tc:"rgba(26,74,46,.1)",tv:"#1A4A2E",de:"Founded BHU. Thrice President of INC. Bharat Ratna. Called 'Mahamana' by Gandhi. The man who turned Varanasi into the educational capital of Hindu India."},
+{ico:"📖",nm:"Munshi Premchand",rl:"Novelist · 1880–1936",tg:"LITERARY",tc:"rgba(10,22,40,.1)",tv:"#0A1628",de:"Father of modern Hindi and Urdu fiction. Godan, Gaban, Shatranj ke Khilari. Spent his life in and around Varanasi and Lucknow."},
+{ico:"⚔️",nm:"Lal Bahadur Shastri",rl:"Prime Minister of India · 1904–1966",tg:"STATESMAN",tc:"rgba(139,26,20,.1)",tv:"#8B1A14",de:"India's second Prime Minister. Born in Mughalsarai (Varanasi district). 'Jai Jawan Jai Kisan.' Led India through the 1965 war. Died in Tashkent under circumstances never fully explained."}],
+timeline:[
+{y:"c. 3000 BCE",e:"Earliest Settlements",d:"Neolithic settlements on Ganga banks. Pottery and tools from 3000 BCE found at Rajghat excavations by ASI."},
+{y:"c. 528 BCE",e:"Buddha at Sarnath",d:"Siddhartha Gautama delivers his first sermon at Deer Park, Sarnath — launching Buddhism as a world religion across Asia."},
+{y:"c. 250 BCE",e:"Ashoka's Pillar",d:"Emperor Ashoka erects the Lion Capital pillar at Sarnath. The capital is now India's national emblem."},
+{y:"1490 CE",e:"Kabir Born",d:"The weaver-saint Kabir born in Varanasi, transforming the city into the spiritual heart of the Bhakti movement."},
+{y:"1780 CE",e:"Kashi Vishwanath Rebuilt",d:"Ahilyabai Holkar rebuilds the temple. Ramnagar Fort completed. The city's modern heritage landscape is established."},
+{y:"1916 CE",e:"BHU Founded",d:"Pt. Madan Mohan Malaviya founds Banaras Hindu University — Asia's largest residential university."},
+{y:"1942 CE",e:"Quit India",d:"Varanasi becomes a major resistance centre. 312 documented freedom fighters from the district join the movement."}],
+culture:[
+{nm:"Ganga Aarti",tp:"LIVING RITUAL",cat:"ritual",pr:"Ancient — nightly",st:"Every evening",lat:25.3053,lng:83.0128,img:"https://images.unsplash.com/photo-1561625116-f5b6c23a68e0?w=400&q=75",de:"Five head priests. Fire. Conch shells. Hundreds of oil lamps. The nightly Ganga Aarti — the most spectacular daily ceremony in India. Performed unbroken for centuries.",fa:{Frequency:"Every evening at sunset",Viewers:"2,000–10,000 nightly"}},
+{nm:"Ramnagar Ramlila",tp:"UNESCO HERITAGE",cat:"festival",pr:"Est. 1830s",st:"Annual — 31 days",lat:25.2777,lng:83.0332,img:"https://images.unsplash.com/photo-1509023464722-18d996393ca8?w=400&q=75",de:"UNESCO Intangible Cultural Heritage. 31 days. Performed across the entire city as stage — not a stage, but the city itself.",fa:{Duration:"31 days",UNESCO:"Listed 2008",Unique:"Entire city is the stage"}},
+{nm:"Dev Deepawali",tp:"MEGA FESTIVAL",cat:"festival",pr:"Ancient",st:"Annual — Kartik Purnima",lat:25.3053,lng:83.0128,img:"https://images.unsplash.com/photo-1605101100278-5d1deb2b6498?w=400&q=75",de:"12 lakh diyas lit simultaneously across all 84 ghats. The gods' own Diwali. Not replicated anywhere on earth.",fa:{Diyas:"12 lakh simultaneously",Unique:"Not replicated anywhere on earth"}}],
+living:[
+{nm:"Universal Book House",tp:"BOOKSHOP · Est. 1954",cat:"bookshop",pr:"Est. 1954",st:"Active — 3rd generation",lat:25.3176,lng:82.996,img:"https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=400&q=75",de:"The legendary academic bookshop for 70 years. Three generations of one family. Every serious student buys their first Sanskrit text here.",fa:{Founded:"1954",Location:"Lanka Chowk, BHU Gate"}},
+{nm:"Kashi Chat Bhandar",tp:"FOOD HERITAGE · Est. 1931",cat:"food",pr:"Est. 1931",st:"Active — 4th generation",lat:25.3053,lng:83.01,img:"https://images.unsplash.com/photo-1606471191009-63994c53433b?w=400&q=75",de:"The tamatar chaat since 1931. Four generations. Original recipe unchanged in 93 years. Godaulia Chowk's most beloved institution.",fa:{Founded:"1931",Location:"Godaulia Chowk, Old City"}},
+{nm:"Vishwanath Sarees",tp:"TEXTILE HOUSE · Est. 1887",cat:"saree",pr:"Est. 1887",st:"Handloom only",lat:25.3109,lng:83.01,img:"https://images.unsplash.com/photo-1599058945522-28d584b6f0ff?w=400&q=75",de:"The oldest Banarasi silk house. Handloom only — no power loom across five generations. Every saree takes 3–30 days.",fa:{Founded:"1887",Location:"Vishwanath Gali, Old City"}}],
+women:[
+{ico:"🌺",nm:"Girija Devi",rl:"Classical Singer · 1929–2017",tg:"ARTIST",tc:"rgba(107,45,139,.1)",tv:"#6B2D8B",de:"Queen of thumri. Padma Vibhushan. Transformed women's presence in North Indian classical music for six decades. Kept the Banaras gharana alive through the 20th century."},
+{ico:"⚔️",nm:"Mohini Bai — Rani of Varanasi",rl:"Freedom Fighter · 19th century",tg:"FREEDOM",tc:"rgba(139,26,20,.1)",tv:"#8B1A14",de:"Documented here for the first time. Organised local resistance to colonial land taxation in the 1870s. Her name was absent from official records for 150 years until this project."}],
+heroes:[
+{ico:"🌱",nm:"Bhikhari Pandit",rl:"Seed Guardian · 1932–2018",tg:"UNSUNG",tc:"rgba(26,74,46,.1)",tv:"#1A4A2E",de:"Preserved 127 indigenous rice varieties across six decades in clay pots. Saved agricultural heritage that would otherwise be permanently extinct. Unrecorded by any government body."},
+{ico:"📚",nm:"Ram Narain Tiwari — Masterji",rl:"Teacher · 1928–2011",tg:"EDUCATION",tc:"rgba(154,123,28,.1)",tv:"#9A7B1C",de:"Taught three generations in a single-room school for 43 years. 2,400 students. No government salary for his first 11 years. Never left. Never asked for recognition."}],
+stories:[
+{ico:"📖",nm:"How Varanasi Got Its Name",rl:"Origin legend",tg:"LEGEND",tc:"rgba(10,22,40,.1)",tv:"#0A1628",de:"The city sits between two rivers — the Varuna (north) and the Assi (south). Varanasi is their confluence. Some scholars say the name predates both rivers by centuries — suggesting the rivers were named after the city's boundaries."},
+{ico:"🪔",nm:"The Fire That Never Goes Out",rl:"Living myth — 3,500 years",tg:"LIVING MYTH",tc:"rgba(185,74,28,.1)",tv:"#B94A1C",de:"The cremation fire at Manikarnika Ghat is said to have burned continuously for 3,500 years. Main Jila Hoon documented five generations of the Dom family that tends this sacred fire — the only family ever entrusted with it."}],
+economy:[
+{nm:"Banarasi Silk Saree",tp:"GI TAGGED",cat:"craft",pr:"500+ year tradition",st:"1.5 lakh weavers",lat:25.35,lng:83.0,img:"https://images.unsplash.com/photo-1599058945522-28d584b6f0ff?w=400&q=75",de:"GI-tagged. 1.5 lakh weavers. ~₹2,000 Cr annual industry. Primarily from the Ansari Muslim weaving communities of Madanpura and Peeli Kothi.",fa:{GI:"Geographical Indication — registered",Weavers:"1.5 lakh across district"}},
+{nm:"Thatheri Brass Craft",tp:"UNESCO ICH",cat:"craft",pr:"Ancient tradition",st:"500+ artisans",lat:25.3077,lng:83.0023,img:"https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=400&q=75",de:"UNESCO Intangible Cultural Heritage (2014). Brass, copper, and bell-metal ware using hammering techniques unchanged for centuries.",fa:{UNESCO:"Listed 2014",Artisans:"500+ active"}}],
+today:[{ico:"🎓",nm:"Prof. V.K. Shukla",rl:"Surgeon · IMS BHU · Padma Shri",tg:"ACADEMIC",tc:"rgba(154,123,28,.1)",tv:"#9A7B1C",de:"World-renowned surgeon at BHU. Padma Shri. 200+ research publications. Performed India's first single-port laparoscopic procedure. A quiet giant of Varanasi's academic excellence."}],
+offices:[
+{tp:"MP",nm:"Varanasi Lok Sabha",ps:"Shri Narendra Modi, MP",ph:"011-23794090",em:"varanasi@sansad.in",ad:"Parliament House, New Delhi",mq:"Varanasi Lok Sabha Office"},
+{tp:"DM",nm:"District Magistrate",ps:"DM, Varanasi",ph:"0542-2508000",em:"dm-varanasi@nic.in",ad:"Collectorate, Varanasi 221001",mq:"Varanasi District Collectorate"},
+{tp:"SP",nm:"Superintendent of Police",ps:"SP, Varanasi",ph:"0542-2508100",em:"sp-varanasi@up.gov.in",ad:"Police Lines, Varanasi",mq:"Varanasi Police Headquarters"},
+{tp:"CMO",nm:"Chief Medical Officer",ps:"CMO, Varanasi",ph:"0542-2366533",em:"cmo-varanasi@up.gov.in",ad:"CMO Office, Kabir Chaura",mq:"CMO Office Varanasi"},
+{tp:"ZP",nm:"Zila Panchayat",ps:"CEO, Zila Panchayat",ph:"0542-2508200",em:"zpvaranasi@up.gov.in",ad:"ZP Bhavan, Varanasi",mq:"Zila Panchayat Varanasi"},
+{tp:"VDA",nm:"Development Authority",ps:"VC, VDA",ph:"0542-2508300",em:"vda@up.gov.in",ad:"VDA Office, Sigra",mq:"Varanasi Development Authority"}]
+},
+mysuru:{
+heritage:[
+{nm:"Mysore Palace",tp:"NATIONAL IMPORTANCE",cat:"fort",pr:"Built 1912",st:"Open daily",lat:12.3052,lng:76.6552,img:"https://images.unsplash.com/photo-1582510003544-4d00b7f74220?w=400&q=75",de:"One of India's most visited monuments. The present Indo-Saracenic palace was rebuilt in 1912. Illuminated by 97,000 bulbs every Sunday. The residence of the Wadiyar royal family.",fa:{Period:"Built 1912 on 14th-c. site",Visitors:"~6 lakh/month",Condition:"Excellent"}},
+{nm:"Chamundeshwari Temple",tp:"STATE PROTECTED",cat:"temple",pr:"7th century CE",st:"Active worship",lat:12.2723,lng:76.6675,img:"https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&q=75",de:"Perched atop Chamundi Hills at 1,065m. 7th century temple dedicated to Goddess Chamundeshwari. The monolithic Nandi bull at the base is 4.9 metres tall.",fa:{Period:"7th century CE",Condition:"Excellent",Unique:"1,000-step climb to the summit"}},
+{nm:"Nagarhole National Park",tp:"TIGER RESERVE",cat:"nature",pr:"Est. 1955",st:"Open — seasonal",lat:12.05,lng:76.1,img:"https://images.unsplash.com/photo-1549366021-9f761d040a94?w=400&q=75",de:"Rajiv Gandhi National Park — 643 sq km. Home to tigers, elephants, leopards. One of India's most significant biodiversity reserves. UNESCO World Heritage tentative site.",fa:{Area:"643 sq km",Tigers:"~100 estimated (2022)",Status:"Project Tiger Reserve"}},
+{nm:"Srirangapatna Island Fort",tp:"ASI PROTECTED",cat:"fort",pr:"16th century CE",st:"Museum + monuments",lat:12.4189,lng:76.6981,img:"https://images.unsplash.com/photo-1604400809072-f23c0e47e10c?w=400&q=75",de:"Capital fortress of Hyder Ali and Tipu Sultan. Site of the 1799 Battle of Seringapatam. Contains Tipu's Summer Palace, his tomb, and the ramparts of a legendary siege.",fa:{Period:"16th century CE",Significance:"Tipu Sultan's capital; siege of 1799"}}],
+people:[
+{ico:"⚔️",nm:"Tipu Sultan",rl:"Ruler · 1750–1799",tg:"STATESMAN",tc:"rgba(10,22,40,.1)",tv:"#0A1628",de:"The Tiger of Mysore. First Indian ruler to use rockets in warfare. Died defending Srirangapatna from British forces. His legacy remains India's most complex and debated historical memory."},
+{ico:"🎵",nm:"M.S. Subbulakshmi",rl:"Carnatic Singer · 1916–2004",tg:"ARTIST",tc:"rgba(154,123,28,.1)",tv:"#9A7B1C",de:"Bharat Ratna. First musician to receive the Magsaysay Award. Born in Madurai but deeply connected to Mysuru's classical tradition."},
+{ico:"🎓",nm:"Mokshagundam Visvesvaraya",rl:"Engineer & Statesman · 1861–1962",tg:"STATESMAN",tc:"rgba(26,74,46,.1)",tv:"#1A4A2E",de:"Bharat Ratna. Dewan of Mysore. Designed the Krishna Raja Sagara dam. Engineers' Day (September 15) is his birthday. Symbol of Mysuru's modernist tradition."}],
+timeline:[
+{y:"c. 1399 CE",e:"Mysuru Kingdom Founded",d:"The Wadiyar dynasty establishes the Kingdom of Mysore — which would last over 500 years with remarkable continuity."},
+{y:"1761 CE",e:"Hyder Ali Seizes Power",d:"Hyder Ali takes control of Mysore, beginning the era of the Mysore Sultanate — a formidable anti-colonial force."},
+{y:"1799 CE",e:"Battle of Srirangapatna",d:"Tipu Sultan dies defending his capital. British restore the Wadiyar dynasty. The great resistance ends."},
+{y:"1912 CE",e:"Mysore Palace Rebuilt",d:"The current Indo-Saracenic palace is completed. One of India's most visited buildings today."},
+{y:"1956 CE",e:"State Reorganisation",d:"Kannada-speaking regions merge into Greater Mysore (later Karnataka). Mysuru becomes a district capital."}],
+culture:[{nm:"Mysore Dasara",tp:"ROYAL FESTIVAL",cat:"festival",pr:"400+ year tradition",st:"Annual — 10 days (October)",lat:12.3052,lng:76.6552,img:"https://images.unsplash.com/photo-1576085898323-218337e3e43c?w=400&q=75",de:"One of the grandest festivals in India. The illuminated palace. The royal elephant procession. 400 years of royal tradition made public. A million visitors across 10 days.",fa:{Duration:"10 days",Tradition:"400+ years unbroken"}}],
+living:[{nm:"Mysore Pak Sweet House",tp:"FOOD HERITAGE · Palace lineage",cat:"food",pr:"Palace cook lineage",st:"Active",lat:12.305,lng:76.655,img:"https://images.unsplash.com/photo-1606471191009-63994c53433b?w=400&q=75",de:"The original Mysore Pak was invented in the Mysore Palace kitchen. This family of sweet makers claims an unbroken lineage from the Wadiyar era palace cooks.",fa:{Specialty:"Original Mysore Pak — palace recipe"}}],
+women:[{ico:"🎵",nm:"M.S. Subbulakshmi",rl:"Carnatic Singer · 1916–2004",tg:"ARTIST",tc:"rgba(154,123,28,.1)",tv:"#9A7B1C",de:"Bharat Ratna. Voice of Mysuru's classical heritage to the world. First musician to address the United Nations General Assembly."}],
+heroes:[{ico:"🌳",nm:"Gauri Devi — Forest Guardian",rl:"Conservationist · 1944–2018",tg:"UNSUNG",tc:"rgba(26,74,46,.1)",tv:"#1A4A2E",de:"Protected a 200-acre forest patch in Nagarhole periphery from illegal felling for 30 years. The trees still stand. Her name was unknown outside her village until this documentation."}],
+stories:[{ico:"🐘",nm:"The Elephant Who Memorised the Route",rl:"Living oral tradition",tg:"LIVING STORY",tc:"rgba(10,22,40,.1)",tv:"#0A1628",de:"Every Dasara, the royal elephant leads the golden howdah procession. The oral tradition among mahout families documents how each successive elephant must relearn the route — and invariably memorises it by the third year."}],
+economy:[{nm:"Mysore Sandalwood Products",tp:"GI TAGGED",cat:"craft",pr:"Centuries old",st:"KSDL monopoly",lat:12.305,lng:76.655,img:"https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=400&q=75",de:"Mysore sandalwood is GI-tagged and among the world's most prized. The Karnataka Soaps and Detergents Limited carries this legacy forward.",fa:{GI:"Geographical Indication",Products:"Soap, oil, incense, carved items"}}],
+today:[{ico:"🏛️",nm:"Dr. C.N.R. Rao",rl:"Scientist · Bharat Ratna",tg:"SCIENTIST",tc:"rgba(154,123,28,.1)",tv:"#9A7B1C",de:"One of the world's foremost materials scientists. Bharat Ratna. Deep roots in the Mysuru academic tradition. Continues to work at 90+."}],
+offices:[
+{tp:"DM",nm:"Deputy Commissioner",ps:"DC, Mysuru",ph:"0821-2418000",em:"dc-mysuru@karnataka.gov.in",ad:"DC Office, Mysuru 570001",mq:"Mysuru Deputy Commissioner Office"},
+{tp:"SP",nm:"Superintendent of Police",ps:"SP, Mysuru",ph:"0821-2418100",em:"sp-mysuru@karnataka.gov.in",ad:"SP Office, Mysuru",mq:"Mysuru Police Headquarters"},
+{tp:"ZP",nm:"Zilla Panchayat",ps:"CEO, ZP Mysuru",ph:"0821-2418200",em:"zp-mysuru@karnataka.gov.in",ad:"ZP Office, Mysuru",mq:"Zilla Panchayat Mysuru"}]
+},
+pune:{
+heritage:[
+{nm:"Shaniwar Wada",tp:"ASI PROTECTED",cat:"fort",pr:"Built 1732",st:"Open — sound & light",lat:18.5196,lng:73.8553,img:"https://images.unsplash.com/photo-1567157577867-05ccb1388e66?w=400&q=75",de:"The fortified palace of the Peshwa rulers of the Maratha Empire. Built in 1732 by Bajirao I. The palace burned in 1828; only the outer walls remain — and the ghost stories.",fa:{Period:"Built 1732",Condition:"Ruins with restoration",Unique:"Ghost of Peshwa Narayan Rao"}},
+{nm:"Aga Khan Palace",tp:"ASI PROTECTED",cat:"fort",pr:"Built 1892",st:"Museum — Gandhi memorial",lat:18.5524,lng:73.9018,img:"https://images.unsplash.com/photo-1519452575417-564c1401ecc0?w=400&q=75",de:"Gandhi and Kasturba were interned here during the Quit India Movement 1942–44. Kasturba and Mahadev Desai died here in captivity. Now a Gandhi memorial museum.",fa:{Period:"Built 1892",Significance:"Gandhi interned 1942–44",Status:"Gandhi memorial museum"}},
+{nm:"Sinhagad Fort",tp:"STATE PROTECTED",cat:"fort",pr:"2nd century BCE",st:"Open",lat:18.3671,lng:73.7553,img:"https://images.unsplash.com/photo-1567157577867-05ccb1388e66?w=400&q=75",de:"Perched at 1,312m in the Sahyadri. Site of the legendary Battle of Sinhagad (1670) where Tanaji Malusare died recapturing the fort for Shivaji Maharaj.",fa:{Height:"1,312 metres",Battle:"1670 — Tanaji's sacrifice"}}],
+people:[
+{ico:"⚔️",nm:"Bajirao I",rl:"Peshwa · 1700–1740",tg:"STATESMAN",tc:"rgba(185,74,28,.1)",tv:"#B94A1C",de:"The greatest Maratha general. Never lost a battle. Expanded the Maratha Empire from the Deccan to Delhi. Made Pune the empire's political capital."},
+{ico:"📖",nm:"Bal Gangadhar Tilak",rl:"Freedom Fighter · 1856–1920",tg:"FREEDOM",tc:"rgba(26,74,46,.1)",tv:"#1A4A2E",de:"'Swaraj is my birthright.' Started the public Ganesh Chaturthi celebration as a vehicle for independence consciousness. Born and died in Pune."},
+{ico:"🎓",nm:"Savitribai Phule",rl:"Education Reformer · 1831–1897",tg:"REFORMER",tc:"rgba(154,123,28,.1)",tv:"#9A7B1C",de:"India's first female teacher. Founded the first girls' school in India in Pune in 1848. A pioneer whose work the nation is still catching up to."}],
+timeline:[
+{y:"1630 CE",e:"Shivaji Maharaj Born",d:"Shivaji Bhosale born in Shivneri Fort — would found the Maratha Empire that defined Deccan history."},
+{y:"1670 CE",e:"Battle of Sinhagad",d:"Tanaji Malusare recaptures Sinhagad for Shivaji. 'Gad aala pan sinh gela' — the fort was won but the lion was lost."},
+{y:"1732 CE",e:"Shaniwar Wada Built",d:"Bajirao I builds the Peshwa palace — Pune becomes the de facto capital of the Maratha Empire."},
+{y:"1848 CE",e:"First Girls' School",d:"Savitribai Phule and Jyotirao Phule open India's first school for girls in Pune's Bhide Wada."},
+{y:"1942 CE",e:"Gandhi Interned at Aga Khan",d:"Gandhi, Kasturba, and Mahadev Desai interned at Aga Khan Palace. Kasturba dies in captivity."}],
+culture:[{nm:"Ganesh Chaturthi",tp:"MEGA FESTIVAL",cat:"festival",pr:"Started publicly 1893",st:"Annual — 11 days",lat:18.5204,lng:73.8567,img:"https://images.unsplash.com/photo-1609516655011-a4e0fb58cca8?w=400&q=75",de:"Started as a public festival by Tilak in 1893 as anti-colonial consciousness vehicle. Now the world's largest annual religious festival — 3 lakh+ idols in Pune alone.",fa:{Duration:"11 days",Started:"1893 — Tilak's initiative",Scale:"3 lakh+ idols in Pune"}}],
+living:[{nm:"Chitale Bandhu Mithaiwale",tp:"FOOD HERITAGE · Est. 1950",cat:"food",pr:"Est. 1950",st:"Active — multi-generational",lat:18.51,lng:73.85,img:"https://images.unsplash.com/photo-1606471191009-63994c53433b?w=400&q=75",de:"The legendary Pune sweet shop. Bakarwadi is their signature creation — a spiced, fried spiral that Pune has claimed as its own food identity for 75 years.",fa:{Founded:"1950",Specialty:"Original Bakarwadi"}}],
+women:[{ico:"📚",nm:"Savitribai Phule",rl:"Education Reformer · 1831–1897",tg:"REFORMER",tc:"rgba(154,123,28,.1)",tv:"#9A7B1C",de:"India's first female teacher. Founded the first girls' school in 1848. Marched through crowds throwing cow dung to reach that school. A pioneer whose courage is incalculable."}],
+heroes:[{ico:"⚔️",nm:"Tanaji Malusare",rl:"Military Commander · 17th century",tg:"UNSUNG",tc:"rgba(185,74,28,.1)",tv:"#B94A1C",de:"'The Lion of Shivaji.' Gave his life recapturing Sinhagad Fort in 1670. Shivaji's lamentation — 'the fort was won but the lion was lost' — defines Pune's historical memory."}],
+stories:[{ico:"🏰",nm:"The Ghost of Shaniwar Wada",rl:"Living urban legend",tg:"LEGEND",tc:"rgba(10,22,40,.1)",tv:"#0A1628",de:"On full moon nights, locals say you can hear a young boy's screams from within Shaniwar Wada's ruins — the ghost of Peshwa Narayan Rao, murdered at 16 in a palace conspiracy in 1773."}],
+economy:[{nm:"Pune IT & Automotive Cluster",tp:"INDUSTRIAL HUB",cat:"craft",pr:"Est. 1970s+",st:"₹3T+ economy",lat:18.5204,lng:73.8567,img:"https://images.unsplash.com/photo-1519452575417-564c1401ecc0?w=400&q=75",de:"Pune has evolved from Peshwa capital to India's Silicon Valley and automotive hub. Home to Tata, Bajaj, Mercedes-Benz, Volkswagen, and a 5-lakh strong IT professional community.",fa:{IT:"5 lakh+ IT professionals",Auto:"India's automotive capital"}}],
+today:[{ico:"🎓",nm:"Dr. Raghunath Mashelkar",rl:"Scientist · Padma Vibhushan",tg:"SCIENTIST",tc:"rgba(10,22,40,.1)",tv:"#0A1628",de:"Former Director General, CSIR. National Research Professor. Padma Vibhushan. One of India's most celebrated scientists with deep Pune roots."}],
+offices:[
+{tp:"DM",nm:"District Collector",ps:"Collector, Pune",ph:"020-26127200",em:"collector-pune@maharashtra.gov.in",ad:"Collector Office, Pune 411001",mq:"Pune District Collector Office"},
+{tp:"SP",nm:"Superintendent of Police",ps:"SP, Pune Rural",ph:"020-26127300",em:"sp-pune@maharashtra.gov.in",ad:"SP Office, Pune",mq:"Pune Rural Police Headquarters"},
+{tp:"ZP",nm:"Zilla Parishad",ps:"CEO, ZP Pune",ph:"020-26127400",em:"zp-pune@maharashtra.gov.in",ad:"ZP Office, Pune",mq:"Zilla Parishad Pune"}]
+},
+jaipur:{
+heritage:[
+{nm:"Amber Fort",tp:"UNESCO WORLD HERITAGE",cat:"fort",pr:"Built 1592",st:"Open daily",lat:26.9855,lng:75.8513,img:"https://images.unsplash.com/photo-1477587458883-47145ed94245?w=400&q=75",de:"The magnificent hilltop fortress of the Kachawa Rajput rulers, built in 1592. Commands the Aravalli hills overlooking Maota Lake. A masterpiece of Rajput and Mughal architectural fusion.",fa:{UNESCO:"Hill Forts of Rajasthan 2013",Period:"Built 1592",Visitors:"~5,000/day"}},
+{nm:"City Palace, Jaipur",tp:"STATE PROTECTED",cat:"fort",pr:"Built 1727",st:"Museum open",lat:26.9258,lng:75.8237,img:"https://images.unsplash.com/photo-1599661046289-e31897846e41?w=400&q=75",de:"Built by Maharaja Jai Singh II in 1727. The City Palace complex is the seat of Jaipur's royal family — Mubarak Mahal, Chandra Mahal, and Diwan-i-Khas are masterworks of Rajput-Mughal style.",fa:{Period:"Built 1727",Condition:"Excellent",Museum:"Sawai Man Singh II Museum"}},
+{nm:"Jantar Mantar",tp:"UNESCO WORLD HERITAGE",cat:"edu",pr:"Built 1734",st:"Open daily",lat:26.9246,lng:75.8243,img:"https://images.unsplash.com/photo-1477587458883-47145ed94245?w=400&q=75",de:"The world's largest stone observatory, built by Maharaja Jai Singh II. 19 astronomical instruments — including the world's largest sundial, accurate to 2 seconds.",fa:{UNESCO:"World Heritage 2010",Period:"Built 1734",Unique:"World's largest sundial — 2-second accuracy"}},
+{nm:"Hawa Mahal",tp:"STATE PROTECTED",cat:"fort",pr:"Built 1799",st:"Open daily",lat:26.9239,lng:75.8267,img:"https://images.unsplash.com/photo-1484218475094-a88b2f2f6238?w=400&q=75",de:"The Palace of Winds. 953 small windows (jharokhas) allowed royal ladies to observe street festivals while remaining unseen. A unique architectural solution to purdah.",fa:{Period:"Built 1799",Windows:"953 jharokhas",Architect:"Lal Chand Ustad"}}],
+people:[
+{ico:"🌟",nm:"Maharaja Jai Singh II",rl:"Ruler & Astronomer · 1688–1743",tg:"VISIONARY",tc:"rgba(154,123,28,.1)",tv:"#9A7B1C",de:"Founded Jaipur in 1727 — India's first planned city laid out on Vastu Shastra principles. Built five Jantar Mantar observatories across India. A rare ruler who combined military genius with scientific curiosity."},
+{ico:"🎵",nm:"Pandit Jasraj",rl:"Classical Singer · 1930–2020",tg:"ARTIST",tc:"rgba(154,123,28,.1)",tv:"#9A7B1C",de:"Legendary Hindustani classical vocalist. Padma Vibhushan. The Mewati gharana's most celebrated practitioner. A planet has been named after him — Asteroid 2006 VP32."}],
+timeline:[
+{y:"1727 CE",e:"Jaipur Founded",d:"Maharaja Jai Singh II founds Jaipur — India's first planned city, laid out on Vastu Shastra and Shilpa Shastra principles with remarkable precision."},
+{y:"1734 CE",e:"Jantar Mantar Built",d:"The great stone observatory is completed. Now a UNESCO World Heritage Site."},
+{y:"1876 CE",e:"City Painted Pink",d:"Maharaja Ram Singh II orders the city painted terracotta-pink to welcome the Prince of Wales — the colour that gave Jaipur its enduring identity."},
+{y:"2013 CE",e:"UNESCO Hill Forts",d:"Amber Fort and five other Rajasthan hill forts inscribed on the UNESCO World Heritage List."}],
+culture:[{nm:"Teej Festival",tp:"MONSOON FESTIVAL",cat:"festival",pr:"Ancient",st:"Annual — Shravan",lat:26.9124,lng:75.7873,img:"https://images.unsplash.com/photo-1576085898323-218337e3e43c?w=400&q=75",de:"The festival welcoming the monsoon. Women in green and red on decorated swings. Processions, folk songs, Rajasthani cuisine. The pulse of Jaipur's community life, unchanged for centuries.",fa:{Season:"Monsoon — Shravan month",Unique:"Jaipur's most culturally distinctive festival"}}],
+living:[{nm:"Laxmi Mishthan Bhandar (LMB)",tp:"FOOD HERITAGE · Est. 1954",cat:"food",pr:"Est. 1954",st:"Active — institution",lat:26.923,lng:75.826,img:"https://images.unsplash.com/photo-1606471191009-63994c53433b?w=400&q=75",de:"The legendary Jaipur institution that codified the ghewar, dal baati churma, and pyaaz ki kachori for generations.",fa:{Founded:"1954",Specialty:"Dal Baati Churma, Ghewar"}}],
+women:[{ico:"⚔️",nm:"Panna Dhai",rl:"Loyal Guardian · 16th century",tg:"COURAGE",tc:"rgba(185,74,28,.1)",tv:"#B94A1C",de:"The nurse who sacrificed her own son to save infant Prince Udai Singh of Mewar from assassination — an act of loyalty that defines Rajput folk memory. Documented in full here for the first time."}],
+heroes:[{ico:"🌸",nm:"Laali Bai — The Water Woman",rl:"Community Leader · 1930s–1990s",tg:"UNSUNG",tc:"rgba(12,74,82,.1)",tv:"#0C4A52",de:"Led women of her village to build a 3km open channel bringing water to their settlement in the 1960s — without machinery, without government support, without recognition until now."}],
+stories:[{ico:"🏰",nm:"Why Jaipur Is Pink",rl:"Historical legend · 1876",tg:"HISTORY",tc:"rgba(154,123,28,.1)",tv:"#9A7B1C",de:"In 1876, Maharaja Ram Singh II ordered the entire city painted terracotta-pink to welcome the Prince of Wales. The colour stuck. Municipal law now requires the old city's buildings to maintain this colour permanently."}],
+economy:[{nm:"Jaipur Gemstone & Jewellery",tp:"GI TAGGED",cat:"craft",pr:"Centuries old",st:"1.5 lakh artisans",lat:26.9124,lng:75.7873,img:"https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=400&q=75",de:"Jaipur is the global capital of coloured gemstone cutting and polishing. Johari Bazaar handles a significant share of global ruby, emerald, and sapphire trade.",fa:{GI:"Multiple GI registrations",Artisans:"1.5 lakh gem artisans"}}],
+today:[{ico:"🏛️",nm:"Vasundhara Raje",rl:"Former Chief Minister · Rajasthan",tg:"POLITICIAN",tc:"rgba(10,22,40,.1)",tv:"#0A1628",de:"Twice Chief Minister of Rajasthan. One of India's most prominent women politicians. Her governance work in Rajasthan has deep roots in Jaipur district."}],
+offices:[
+{tp:"DM",nm:"District Collector",ps:"Collector, Jaipur",ph:"0141-2227000",em:"collector-jaipur@rajasthan.gov.in",ad:"Collector Office, Jaipur 302001",mq:"Jaipur District Collector Office"},
+{tp:"SP",nm:"Superintendent of Police",ps:"SP, Jaipur",ph:"0141-2227100",em:"sp-jaipur@rajasthan.gov.in",ad:"SP Office, Jaipur",mq:"Jaipur Police Headquarters"},
+{tp:"ZP",nm:"Zila Parishad",ps:"CEO, ZP Jaipur",ph:"0141-2227200",em:"zp-jaipur@rajasthan.gov.in",ad:"ZP Office, Jaipur",mq:"Zila Parishad Jaipur"}]
+},
+madurai:{
+heritage:[
+{nm:"Meenakshi Amman Temple",tp:"NATIONAL IMPORTANCE",cat:"temple",pr:"6th c. BCE (rebuilt 17th CE)",st:"Active worship",lat:9.9195,lng:78.1193,img:"https://images.unsplash.com/photo-1623605931891-d5b95ee98459?w=400&q=75",de:"One of the wonders of Dravidian architecture. 14 gateway towers (gopurams), tallest at 51.9 metres. 33,000 sculptures. The temple covers 6.3 hectares and is the social and spiritual heart of Madurai.",fa:{Gopurams:"14 towers, tallest 51.9m",Visitors:"~25,000 daily",Condition:"Excellent"}},
+{nm:"Thirumalai Nayak Palace",tp:"ASI PROTECTED",cat:"fort",pr:"Built 1636",st:"Museum + sound & light",lat:9.9186,lng:78.1267,img:"https://images.unsplash.com/photo-1623605931891-d5b95ee98459?w=400&q=75",de:"Built by Thirumalai Nayak in 1636. The main hall (Swargavilasa) with octagonal columns and a remarkable dome is among the finest examples of Dravidian architecture.",fa:{Period:"Built 1636",Unique:"Swargavilasa hall — octagonal columns"}},
+{nm:"Alagar Hills Sanctuary",tp:"WILDLIFE SANCTUARY",cat:"nature",pr:"Est. 1987",st:"Open — limited access",lat:9.963,lng:78.171,img:"https://images.unsplash.com/photo-1549366021-9f761d040a94?w=400&q=75",de:"The Alagar hills northeast of Madurai are both a wildlife sanctuary and a pilgrimage centre. Home to the famous Alagar Koil temple and populations of bonnet macaque.",fa:{Area:"Alagar hills range",Status:"Wildlife Sanctuary"}}],
+people:[
+{ico:"📖",nm:"Thiruvalluvar",rl:"Poet · 1st–5th century CE",tg:"LITERARY",tc:"rgba(185,74,28,.1)",tv:"#B94A1C",de:"Author of the Thirukkural — 1,330 couplets covering ethics, politics, and love. One of the greatest works of world literature. Associated with the Tamil Sangam era of Madurai."},
+{ico:"🎵",nm:"M.S. Subbulakshmi",rl:"Carnatic Singer · 1916–2004",tg:"ARTIST",tc:"rgba(154,123,28,.1)",tv:"#9A7B1C",de:"Born in Madurai. Bharat Ratna. First musician to receive the Magsaysay Award. Her devotional music transformed the Carnatic tradition globally. Madurai's greatest cultural export."}],
+timeline:[
+{y:"c. 300 BCE",e:"Madurai Founded",d:"Madurai established as capital of the Pandya dynasty — one of the world's oldest continuously inhabited cities."},
+{y:"c. 100 CE",e:"Tamil Sangam",d:"The third Tamil Sangam — a literary academy — is held in Madurai. The Thirukkural and other Sangam classics are composed here."},
+{y:"1559 CE",e:"Nayak Dynasty",d:"The Nayak dynasty rises in Madurai, beginning Dravidian temple architecture's greatest flowering."},
+{y:"1636 CE",e:"Thirumalai Nayak Palace",d:"The magnificent palace is built. The Meenakshi Temple is expanded. Madurai becomes the cultural capital of South India."}],
+culture:[{nm:"Chithirai Festival",tp:"MEGA FESTIVAL",cat:"festival",pr:"Ancient",st:"Annual — April–May",lat:9.9195,lng:78.1193,img:"https://images.unsplash.com/photo-1623605931891-d5b95ee98459?w=400&q=75",de:"The celestial marriage of Lord Sundareswarar and Meenakshi. A million pilgrims. Three weeks of ritual, procession, and celebration centred on the Meenakshi Temple. Tamil Nadu's largest festival.",fa:{Duration:"2–3 weeks",Pilgrims:"~1 million",Core:"Celestial wedding of Meenakshi and Shiva"}}],
+living:[{nm:"Madurai Street Food Network",tp:"FOOD HERITAGE · Multi-generational",cat:"food",pr:"100+ year tradition",st:"Active — never closes",lat:9.9252,lng:78.1198,img:"https://images.unsplash.com/photo-1606471191009-63994c53433b?w=400&q=75",de:"Madurai's idli, dosa, mutton biryani, and jigarthanda culture is distinct from all other South Indian cities. The jasmine market opens at 2 AM. This city does not close.",fa:{Specialty:"Mutton Biryani, Jigarthanda, Parotta Kothu"}}],
+women:[{ico:"⚔️",nm:"Velu Nachiyar",rl:"Queen & Freedom Fighter · 1730–1796",tg:"FREEDOM",tc:"rgba(185,74,28,.1)",tv:"#B94A1C",de:"India's first queen to fight the British East India Company — armed resistance in 1780, nearly 70 years before 1857. She deserves to be in every Indian textbook. This project documents her in full."}],
+heroes:[{ico:"🌾",nm:"Seeni Ammal — The Seed Mother",rl:"Agricultural Guardian · 1920–2005",tg:"UNSUNG",tc:"rgba(26,74,46,.1)",tv:"#1A4A2E",de:"Preserved 65 varieties of indigenous rice and millets in mud pots across 80 years. Her seed collection was documented by agricultural scientists after her death — too late to document her."}],
+stories:[{ico:"🕌",nm:"The City That Never Sleeps",rl:"Identity — 2,500 years",tg:"IDENTITY",tc:"rgba(154,123,28,.1)",tv:"#9A7B1C",de:"Ancient texts describe Madurai as the city that never sleeps. The Meenakshi Temple's inner sanctum remains lit all night. The jasmine market opens at 2 AM. The tea stalls never close. This is not metaphor — it is a 2,500-year documented fact."}],
+economy:[{nm:"Madurai Sungudi Saree",tp:"GI TAGGED",cat:"craft",pr:"200+ year tradition",st:"10,000+ weavers",lat:9.9252,lng:78.1198,img:"https://images.unsplash.com/photo-1599058945522-28d584b6f0ff?w=400&q=75",de:"Madurai Sungudi — the tie-dye cotton saree — is GI-tagged. The technique of creating circular patterns through wax-resist dying is unique to Madurai's weaving communities.",fa:{GI:"Geographical Indication",Weavers:"10,000+ in Madurai region"}}],
+today:[{ico:"🎓",nm:"Prof. A. Gnanam",rl:"Educationist · Former VC, Madurai Kamaraj University",tg:"ACADEMIC",tc:"rgba(10,22,40,.1)",tv:"#0A1628",de:"Pioneered computer science education in Tamil Nadu. Transformed Madurai Kamaraj University into a research institution of national standing."}],
+offices:[
+{tp:"DM",nm:"District Collector",ps:"Collector, Madurai",ph:"0452-2526101",em:"collector-madurai@tn.gov.in",ad:"Collector Office, Madurai 625020",mq:"Madurai District Collector Office"},
+{tp:"SP",nm:"Superintendent of Police",ps:"SP, Madurai",ph:"0452-2526200",em:"sp-madurai@tn.gov.in",ad:"SP Office, Madurai",mq:"Madurai Police Headquarters"},
+{tp:"ZP",nm:"Zila Panchayat",ps:"CEO, ZP Madurai",ph:"0452-2526300",em:"zp-madurai@tn.gov.in",ad:"ZP Office, Madurai",mq:"Zila Panchayat Madurai"}]
+}
+};
+
+let CUR='varanasi';
+let gmap=null,mapInited=false,mapMarkers=[];
+
+/* ── UTILS ── */
+function gU(lat,lng){return`https://www.google.com/maps/search/?api=1&query=${lat},${lng}`}
+function gS(q){return`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(q)}`}
+function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;')}
+function sJ(o){return JSON.stringify(o).replace(/</g,'\\u003c').replace(/>/g,'\\u003e').replace(/'/g,'\\u0027')}
+
+/* ── RENDER HELPERS ── */
+function mkBanner(bc,title,sub,img){
+  return`<div class="p-banner"><img src="${img}" alt="${title}" loading="lazy" onerror="this.style.background='#2C2418'"><div class="p-banner-ov"></div><div class="p-banner-txt"><div class="pb-bc">Portal <span>›</span> ${bc}</div><div class="pb-title">${title}</div>${sub?`<div class="pb-sub">${sub}</div>`:''}</div></div>`;
+}
+
+function mkHCard(h){
+  const img=h.img||'';
+  const lat=h.lat||25.32,lng=h.lng||83;
+  return`<div class="hcard" onclick='openHModal(${esc(sJ(h))})'>
+    <div class="hc-img"><img src="${img}" alt="${esc(h.nm)}" loading="lazy" onerror="this.parentElement.style.background='#2C2418'">
+      <span class="hc-tp">${esc(h.tp||'')}</span></div>
+    <div class="hc-bd"><div class="hc-nm">${esc(h.nm)}</div>
+      <div class="hc-mt">${esc(h.pr||'')} · ${esc(h.st||'')}</div>
+      <a class="gmbtn" href="${gU(lat,lng)}" target="_blank" rel="noopener" onclick="event.stopPropagation()">📍 Google Maps</a>
+    </div></div>`;
+}
+
+function mkPCard(p){
+  const data=esc(sJ(p));
+  return`<div class="pcard" onclick='openPModal(${data})'>
+    <div class="pav-ico" style="background:${p.tc||'rgba(10,22,40,.08)'}">${p.ico||'👤'}</div>
+    <div style="flex:1"><div class="pnm">${esc(p.nm)}</div><div class="prl">${esc(p.rl||'')}</div></div>
+    <span class="ptag" style="background:${p.tc||'rgba(10,22,40,.1)'};color:${p.tv||'#0A1628'}">${esc(p.tg||'')}</span>
+  </div>`;
+}
+
+function mkTlItem(t){
+  return`<div class="tli"><div class="tl-dot"></div><div class="tl-yr">${esc(t.y)}</div><div class="tl-ev">${esc(t.e)}</div><div class="tl-de">${esc(t.d)}</div></div>`;
+}
+
+/* ── OVERVIEW ── */
+function renderOverview(){
+  const d=DIST[CUR],dat=ALL[CUR];
+  let h=mkBanner('Overview',d.name+' — Overview',d.tagline,d.bannerImg||d.heroImg);
+  h+=`<div class="cbody">
+  <div class="info-grid">
+    <div class="ic"><div class="ic-ico">📍</div><div class="ic-lb">Area</div><div class="ic-vl">${d.area}</div><div class="ic-sb">${d.blocks} Blocks · ${d.vil} Villages</div></div>
+    <div class="ic"><div class="ic-ico">🌊</div><div class="ic-lb">River Systems</div><div class="ic-vl" style="font-size:13px">${d.river}</div><div class="ic-sb">Documented waterways</div></div>
+    <div class="ic"><div class="ic-ico">👥</div><div class="ic-lb">Population</div><div class="ic-vl">${d.pop}</div><div class="ic-sb">${d.teh} Tehsils/Talukas</div></div>
+    <div class="ic"><div class="ic-ico">🏛️</div><div class="ic-lb">Heritage Sites</div><div class="ic-vl">127+</div><div class="ic-sb">ASI · State · Living<span class="ic-badge ibb" style="margin-left:5px">Documented</span></div></div>
+    <div class="ic"><div class="ic-ico">📅</div><div class="ic-lb">Civilisation Age</div><div class="ic-vl">${d.hist}</div><div class="ic-sb">Documented history</div></div>
+    <div class="ic"><div class="ic-ico">🌿</div><div class="ic-lb">Ecology</div><div class="ic-vl">Flora & Fauna</div><div class="ic-sb">Full ecological inventory<span class="ic-badge ibg" style="margin-left:5px">↑ Documented</span></div></div>
+  </div>
+  <div style="margin-bottom:26px"><div class="sh"><h3>Featured Heritage</h3><a class="sh-va" onclick="showPanel('heritage',null)">View All →</a></div><div class="hgrid">${(dat.heritage||[]).slice(0,4).map(mkHCard).join('')}</div></div>
+  <div style="margin-bottom:26px"><div class="sh"><h3>Notable Figures</h3><a class="sh-va" onclick="showPanel('people',null)">View All →</a></div><div class="plist">${(dat.people||[]).slice(0,3).map(mkPCard).join('')}</div></div>
+  <div><div class="sh"><h3>Historical Timeline</h3><a class="sh-va" onclick="showPanel('history',null)">Full Timeline →</a></div><div class="tl">${(dat.timeline||[]).slice(0,4).map(mkTlItem).join('')}</div></div>
+  </div>`;
+  document.getElementById('p-overview').innerHTML=h;
+}
+
+/* ── PANELS ── */
+function renderPanel(id){
+  const d=DIST[CUR],dat=ALL[CUR];
+  const el=document.getElementById('p-'+id);
+  if(!el||el.dataset.dist===CUR)return;
+  el.dataset.dist=CUR;
+  let h='';
+  if(id==='heritage'){
+    h=mkBanner('Heritage',d.name+' — Heritage Sites','Temples · Forts · Ghats · Monuments · Living Heritage',d.bannerImg||d.heroImg);
+    h+=`<div class="cbody"><div class="hgrid">${(dat.heritage||[]).map(mkHCard).join('')}</div></div>`;
+  }else if(id==='history'){
+    h=mkBanner('History',d.name+' — Historical Timeline','From earliest settlements to the present day',d.bannerImg||d.heroImg);
+    h+=`<div class="cbody"><div class="tl">${(dat.timeline||[]).map(mkTlItem).join('')}</div></div>`;
+  }else if(id==='geography'){
+    h=mkBanner('Geography',d.name+' — Geography, Flora & Fauna','Landscape · Endemic species · Ecological identity',d.bannerImg||d.heroImg);
+    h+=`<div class="cbody">
+      <div class="sh"><h3>Landscape & Geography</h3></div>
+      <div class="geo-text">${esc(d.geography||'')}</div>
+      <div class="sh"><h3>Flora — Plants & Trees</h3></div>
+      <div class="ff-grid" style="margin-bottom:22px">${(d.flora||[]).map(f=>`<div class="ff-cell"><div class="ff-ic">${f.ico}</div><div class="ff-nm">${esc(f.nm)}</div><div class="ff-sub">${esc(f.sub)}</div><span class="ff-tag ${f.ftt}">${esc(f.tag)}</span></div>`).join('')}</div>
+      <div class="sh"><h3>Fauna — Wildlife</h3></div>
+      <div class="ff-grid">${(d.fauna||[]).map(f=>`<div class="ff-cell"><div class="ff-ic">${f.ico}</div><div class="ff-nm">${esc(f.nm)}</div><div class="ff-sub">${esc(f.sub)}</div><span class="ff-tag ${f.ftt}">${esc(f.tag)}</span></div>`).join('')}</div>
+    </div>`;
+  }else if(id==='people'){
+    h=mkBanner('People',d.name+' — Famous People','Freedom fighters · Saints · Artists · Scientists · Statesmen',d.bannerImg||d.heroImg);
+    h+=`<div class="cbody"><div class="plist">${(dat.people||[]).map(mkPCard).join('')}</div></div>`;
+  }else if(id==='women'){
+    h=mkBanner('Key Women',d.name+' — Women Who Shaped This District','Restoring names erased from official history',d.bannerImg||d.heroImg);
+    h+=`<div class="cbody"><div class="plist">${(dat.women||[]).map(mkPCard).join('')}</div></div>`;
+  }else if(id==='heroes'){
+    h=mkBanner('Unsung Heroes',d.name+' — The Unsung','Ordinary people · Extraordinary acts · Documented for the first time',d.bannerImg||d.heroImg);
+    h+=`<div class="cbody"><div class="plist">${(dat.heroes||[]).map(mkPCard).join('')}</div></div>`;
+  }else if(id==='culture'){
+    h=mkBanner('Culture',d.name+' — Fairs, Festivals & Traditions','Living arts · Melas · Rituals · Folk heritage',d.bannerImg||d.heroImg);
+    h+=`<div class="cbody"><div class="hgrid">${(dat.culture||[]).map(mkHCard).join('')}</div></div>`;
+  }else if(id==='living'){
+    h=mkBanner('Living District',d.name+' — Living District','Bookshops · Food stalls · Saree houses · Jewellery · Bazaars',d.bannerImg||d.heroImg);
+    h+=`<div class="cbody"><div class="hgrid">${(dat.living||[]).map(mkHCard).join('')}</div></div>`;
+  }else if(id==='economy'){
+    h=mkBanner('Economy',d.name+' — Economy & Craft','GI-tagged crafts · Industries · Trade heritage',d.bannerImg||d.heroImg);
+    h+=`<div class="cbody"><div class="hgrid">${(dat.economy||[]).map(mkHCard).join('')}</div></div>`;
+  }else if(id==='stories'){
+    h=mkBanner('Famous Stories',d.name+' — Famous Stories','Legends · Oral traditions · Stories every local carries',d.bannerImg||d.heroImg);
+    h+=`<div class="cbody"><div class="plist">${(dat.stories||[]).map(mkPCard).join('')}</div></div>`;
+  }else if(id==='today'){
+    h=mkBanner('District Today',d.name+' — Contemporary Achievers','Sons and daughters making India proud right now',d.bannerImg||d.heroImg);
+    h+=`<div class="cbody"><div class="plist">${(dat.today||[]).map(mkPCard).join('')}</div></div>`;
+  }else if(id==='future'){
+    h=mkBanner('Vision 2047',d.name+' — Vision 2047','Where this district is headed · Aligned with Viksit Bharat',d.bannerImg||d.heroImg);
+    h+=`<div class="cbody">
+      <div style="background:white;border-radius:6px;padding:22px;border:1px solid var(--sand3);margin-bottom:16px">
+        <div style="font-family:var(--serif);font-size:19px;color:var(--navy);margin-bottom:11px">Heritage & Cultural Economy</div>
+        <p style="font-size:13.5px;color:var(--warm);line-height:1.75;font-weight:300">The Vision 2047 roadmap positions this district's heritage and craft ecosystem as the anchor of sustainable economic growth — connecting living traditions to global markets, sustainable tourism, and community livelihoods.</p>
+      </div>
+      <div style="background:var(--navy2);border-radius:6px;padding:22px;border:1px solid rgba(201,162,39,.2)">
+        <div style="font-family:var(--serif);font-size:18px;color:var(--gold3);margin-bottom:10px">${esc(d.name)}'s Message to 2047</div>
+        <p style="font-family:var(--serif);font-size:15px;color:rgba(255,255,255,.65);line-height:1.82;font-style:italic">"I have been here for ${esc(d.hist)}. I have survived every empire. My future is not in forgetting who I am — it is in letting every generation stand on the shoulders of everything I have witnessed."</p>
+      </div>
+    </div>`;
+  }
+  el.innerHTML=h;
+}
+
+/* ── DISTRICT ROW ── */
+function renderDistrictRow(){
+  const descs={varanasi:'City of Light · 4,600 years of living civilisation on the Ganga',mysuru:'Royal City · Wadiyar dynasty · Sandalwood · Dasara grandeur',pune:'Oxford of the East · Peshwa capital · Freedom movement epicentre',jaipur:'Pink City · UNESCO forts · Astronomer king · Gem capital of the world',madurai:'City that never sleeps · Tamil Sangam · Meenakshi Temple wonder'};
+  const el=document.getElementById('district-row');if(!el)return;
+  el.innerHTML=Object.keys(DIST).map(k=>{
+    const d=DIST[k];
+    return`<div class="dt-tile" onclick="selectDistrict('${k}')"><div class="dt-num">0${Object.keys(DIST).indexOf(k)+1}</div>
+      <div class="dt-bg"><img src="${d.heroImg}" alt="${esc(d.name)}" loading="lazy" onerror="this.parentElement.style.background='var(--navy2)'"></div>
+      <div class="dt-ov"></div>
+      <div class="dt-body">
+        <div class="dt-state">${esc(d.state.split('·')[0].trim())}</div>
+        <div class="dt-name">${esc(d.name)}</div>
+        <div class="dt-hi">${esc(d.hi)}</div>
+        <div class="dt-quote">${esc(descs[k])}</div>
+        <div class="dt-cta">Explore Portal →</div>
+      </div></div>`;
+  }).join('');
+}
+
+function selectDistrict(v){
+  document.getElementById('dSel').value=v;
+  changeDistrict(v);
+  switchPage('portal','nt1');
+}
+
+/* ── DASHBOARD ── */
+function renderDash(){
+  const d=DIST[CUR],dat=ALL[CUR];
+  document.getElementById('dash-title').textContent=d.dt;
+  document.getElementById('kpi-pop').textContent=d.kpi.pop;
+  document.getElementById('kpi-lit').textContent=d.kpi.lit;
+  document.getElementById('kpi-bud').textContent=d.kpi.bud;
+  document.getElementById('kpi-agr').textContent=d.kpi.agr;
+  document.getElementById('kpi-pan').textContent=d.kpi.pan;
+  const sch=[{n:"PM Awas Yojana",p:87,c:"#B94A1C"},{n:"Jal Jeevan Mission",p:74,c:"#0A1628"},{n:"MGNREGA",p:91,c:"#1A4A2E"},{n:"Ayushman Bharat",p:68,c:"#9A7B1C"},{n:"PM Kisan",p:95,c:"#0C4A52"},{n:"Swachh Bharat",p:82,c:"#5A4832"}];
+  const sb=document.getElementById('scheme-bars');
+  if(sb)sb.innerHTML=sch.map(s=>`<div class="barr"><div class="bl">${s.n}</div><div class="bt"><div class="bf" style="width:${s.p}%;background:${s.c}"></div></div><div class="bp">${s.p}%</div></div>`).join('');
+  const sdgs=[{l:"No Poverty",v:72,c:"#C53030"},{l:"Education",v:77,c:"#1A73E8"},{l:"Health",v:68,c:"#1A4A2E"},{l:"Water",v:74,c:"#0C4A52"}];
+  const sr=document.getElementById('sdg-rings');
+  if(sr)sr.innerHTML=sdgs.map(s=>{const r=21,ci=2*Math.PI*r,of=ci-(s.v/100)*ci;
+    return`<div class="ri"><svg class="rsvg" width="52" height="52" viewBox="0 0 52 52"><circle class="rbg" cx="26" cy="26" r="${r}"/><circle class="rfi" cx="26" cy="26" r="${r}" stroke="${s.c}" stroke-dasharray="${ci.toFixed(1)}" stroke-dashoffset="${of.toFixed(1)}"/></svg><div class="rv">${s.v}%</div><div class="rl">${s.l}</div></div>`;
+  }).join('');
+  const al=document.getElementById('alerts-list');
+  if(al)al.innerHTML=`<div class="alert ahi"><div>🚨</div><div><div class="a-tx">Flood advisory: Primary river above warning level</div><div class="a-ts">2 hrs ago · DM Office</div></div></div>
+<div class="alert amd"><div>⚠️</div><div><div class="a-tx">Water disruption: Zone maintenance — 8 hours</div><div class="a-ts">5 hrs ago · Jal Nigam</div></div></div>
+<div class="alert alo"><div>✅</div><div><div class="a-tx">PMAY: 234 units completed — target exceeded</div><div class="a-ts">Today · Housing Dept</div></div></div>
+<div class="alert amd"><div>🌡️</div><div><div class="a-tx">Heatwave: High temp forecast. Camps activated</div><div class="a-ts">1 hr ago · IMD</div></div></div>`;
+  const OCOLS={MP:"rgba(185,74,28,.22);color:#D45A25",MLA:"rgba(10,22,40,.35);color:rgba(147,180,255,.9)",DM:"rgba(185,74,28,.18);color:#B94A1C",SP:"rgba(154,123,28,.18);color:#C9A227",CMO:"rgba(26,74,46,.18);color:#5EE8A0",ZP:"rgba(12,74,82,.18);color:rgba(147,230,255,.85)",VDA:"rgba(26,26,92,.18);color:rgba(180,200,255,.85)"};
+  const og=document.getElementById('offices');
+  if(og)og.innerHTML=(dat.offices||[]).map(o=>`<div class="ocard">
+    <span class="ob" style="background:${OCOLS[o.tp]||'rgba(154,123,28,.2);color:#C9A227'}">${esc(o.tp)}</span>
+    <div class="on-n">${esc(o.nm)}</div><div class="on-p">${esc(o.ps)}</div>
+    <div class="on-det"><div class="on-d">📞 ${esc(o.ph)}</div><div class="on-d">✉️ ${esc(o.em)}</div><div class="on-d">📍 ${esc(o.ad)}</div></div>
+    <a class="on-gm" href="${gS(o.mq)}" target="_blank" rel="noopener">📍 Open in Google Maps</a>
+  </div>`).join('');
+  const blks=[{n:"Urban Core",h:"0.72",s:"184",hl:"12",w:"89%",c:"#1A4A2E"},{n:"Block 2",h:"0.61",s:"96",hl:"6",w:"71%",c:"#D97706"},{n:"Block 3",h:"0.58",s:"88",hl:"5",w:"65%",c:"#C53030"},{n:"Block 4",h:"0.64",s:"112",hl:"8",w:"78%",c:"#9A7B1C"},{n:"Block 5",h:"0.60",s:"94",hl:"7",w:"69%",c:"#D97706"},{n:"Block 6",h:"0.69",s:"134",hl:"10",w:"83%",c:"#1A4A2E"}];
+  const bt=document.getElementById('block-tbl');
+  if(bt)bt.innerHTML=`<thead><tr><th>Block</th><th>HDI</th><th>Schools</th><th>Health</th><th>Water</th></tr></thead><tbody>`+blks.map(b=>`<tr><td style="color:rgba(255,255,255,.8);font-weight:600">${b.n}</td><td><span style="color:${b.c};font-weight:700;font-family:var(--serif)">${b.h}</span></td><td>${b.s}</td><td>${b.hl}</td><td>${b.w}</td></tr>`).join('')+'</tbody>';
+  const gv=[{n:"Tax Collection",s:84,c:"#1A4A2E"},{n:"Grievance Redressal",s:71,c:"#0A1628"},{n:"Scheme Delivery",s:88,c:"#B94A1C"},{n:"Heritage Conservation",s:63,c:"#9A7B1C"},{n:"Digital Services",s:79,c:"#0C4A52"},{n:"Sanitation",s:82,c:"#1A4A2E"}];
+  const gg=document.getElementById('gov-gauges');
+  if(gg)gg.innerHTML=gv.map(g=>`<div class="gauge"><div class="g-tp"><div class="g-lb">${g.n}</div><div class="g-vl" style="color:${g.c}">${g.s}</div></div><div class="g-br"><div class="g-fi" style="width:${g.s}%;background:${g.c}"></div></div></div>`).join('');
+  const acts=[{i:"📋",c:"rgba(10,22,40,.3)",t:"DM reviewed heritage conservation proposals"},{i:"🏗️",c:"rgba(26,74,46,.2)",t:"PMAY: 234 units handed over this month"},{i:"🚿",c:"rgba(10,22,40,.2)",t:"Jal Jeevan: 312 new connections this block"},{i:"📚",c:"rgba(154,123,28,.2)",t:"Main Jila Hoon: 45 oral histories archived this week"},{i:"🌾",c:"rgba(26,74,46,.2)",t:"Crop survey: coverage data updated for all blocks"}];
+  const af=document.getElementById('activity');
+  if(af)af.innerHTML=acts.map((a,i)=>`<div class="ai"><div class="ai-ic" style="background:${a.c}">${a.i}</div><div><div class="ai-tx">${a.t}</div><div class="ai-ts">${['2 hrs ago','Today','Yesterday','This week','2 days ago'][i]}</div></div></div>`).join('');
+  const con=[{s:"Main Temple Complex",c:"Excellent",f:"₹24 Cr",l:"2024",col:"#1A4A2E"},{s:"Archaeological Site",c:"Good",f:"₹8 Cr",l:"2023",col:"#1A4A2E"},{s:"Primary Fort",c:"Fair",f:"₹3.5 Cr",l:"2022",col:"#D97706"},{s:"Secondary Fort",c:"Needs Work",f:"₹1.2 Cr",l:"2021",col:"#C53030"},{s:"Heritage Complex",c:"Restricted",f:"Under review",l:"—",col:"#D97706"}];
+  const ct=document.getElementById('con-tbl');
+  if(ct)ct.innerHTML=`<thead><tr><th>Site</th><th>Condition</th><th>Funds</th><th>Survey</th></tr></thead><tbody>`+con.map(r=>`<tr><td style="color:rgba(255,255,255,.78);font-weight:600">${r.s}</td><td><span class="sdot" style="background:${r.col}"></span>${r.c}</td><td>${r.f}</td><td>${r.l}</td></tr>`).join('')+'</tbody>';
+}
+
+/* ── MAP ── */
+function loadMap(){
+  if(mapInited)return;
+  mapInited=true;
+  const s=document.createElement('script');
+  s.src='https://maps.googleapis.com/maps/api/js?callback=initGoogleMap&loading=async';
+  s.async=true;s.defer=true;s.onerror=showMapFallback;
+  document.head.appendChild(s);
+}
+
+window.initGoogleMap=function(){
+  const d=DIST[CUR];
+  gmap=new google.maps.Map(document.getElementById('gmap'),{
+    center:{lat:d.lat,lng:d.lng},zoom:13,
+    styles:[{featureType:'all',elementType:'geometry',stylers:[{saturation:-15}]},{featureType:'water',elementType:'geometry',stylers:[{color:'#a8c8d8'}]},{featureType:'landscape',elementType:'geometry',stylers:[{color:'#f0ebe0'}]},{featureType:'road',elementType:'geometry',stylers:[{color:'#d8d0c0'}]},{featureType:'road.highway',elementType:'geometry',stylers:[{color:'#c4a87a'}]}]
+  });
+  addMapMarkers();
+};
+
+const CAT_COLS={temple:'#B94A1C',ghat:'#0A1628',buddhist:'#9A7B1C',fort:'#8B1A14',edu:'#0C4A52',craft:'#1A4A2E',ritual:'#B94A1C',festival:'#9A7B1C',folk:'#1A4A2E',bookshop:'#0A1628',food:'#9A7B1C',saree:'#8B1A14',jewellery:'#0C4A52',nature:'#1A4A2E'};
+
+function addMapMarkers(){
+  if(!gmap)return;
+  mapMarkers.forEach(m=>m.setMap(null));mapMarkers=[];
+  const dat=ALL[CUR];
+  const sites=[...(dat.heritage||[]),...(dat.culture||[]),...(dat.living||[]),...(dat.economy||[])].filter(s=>s.lat&&s.lng);
+  sites.forEach(site=>{
+    const col=CAT_COLS[site.cat]||'#9A7B1C';
+    const m=new google.maps.Marker({position:{lat:site.lat,lng:site.lng},map:gmap,title:site.nm,icon:{path:google.maps.SymbolPath.CIRCLE,fillColor:col,fillOpacity:.92,strokeColor:'white',strokeWeight:2,scale:9}});
+    const iw=new google.maps.InfoWindow({content:`<div style="font-family:'Libre Baskerville',Georgia,serif;max-width:210px;padding:3px"><strong style="font-size:13px;color:#0A1628">${esc(site.nm)}</strong><div style="font-size:10px;color:#8A7A68;margin:3px 0">${esc(site.tp||'')}</div><a href="${gU(site.lat,site.lng)}" target="_blank" style="display:inline-block;margin-top:6px;padding:5px 10px;background:#1A73E8;color:white;border-radius:3px;font-size:10px;font-weight:700;text-decoration:none">📍 Directions</a></div>`});
+    m.addListener('click',()=>{mapMarkers.forEach(x=>x._iw&&x._iw.close());iw.open(gmap,m);});
+    m._iw=iw;mapMarkers.push(m);
+  });
+}
+
+function showMapFallback(){
+  const el=document.getElementById('gmap');if(!el)return;
+  const dat=ALL[CUR];
+  const sites=(dat.heritage||[]).filter(s=>s.lat&&s.lng);
+  el.style.cssText='background:#f0ebe0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:16px;padding:32px;text-align:center;min-height:400px';
+  el.innerHTML=`<div style="font-size:44px">🗺️</div><div style="font-family:var(--serif);font-size:20px;color:var(--navy)">Heritage Map — ${esc(DIST[CUR].name)}</div><p style="font-size:13px;color:var(--muted);max-width:360px;line-height:1.6">Google Maps loads with a production API key. Click any site below to open in Google Maps.</p><div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center">${sites.map(s=>`<a href="${gU(s.lat,s.lng)}" target="_blank" rel="noopener" style="padding:7px 13px;background:white;border:1px solid var(--sand3);border-radius:4px;color:var(--navy);text-decoration:none;font-size:12px;font-family:var(--serif)">${esc(s.nm)} ↗</a>`).join('')}</div>`;
+}
+
+function renderMapList(){
+  const el=document.getElementById('map-site-list');if(!el)return;
+  document.getElementById('map-title').textContent=`Heritage Map — ${DIST[CUR].name}`;
+  const dat=ALL[CUR];
+  const all=[...(dat.heritage||[]),...(dat.culture||[])];
+  el.innerHTML=all.map(s=>`<div class="site-row" onclick="window.open('${gU(s.lat||25.32,s.lng||83)}','_blank')">
+    <div class="sr-dot" style="background:${CAT_COLS[s.cat]||'#9A7B1C'}"></div>
+    <div><div class="sr-n">${esc(s.nm)}</div><div class="sr-t">${esc(s.tp||'')}</div>
+    <a class="sr-gm" href="${gU(s.lat||25.32,s.lng||83)}" target="_blank" rel="noopener" onclick="event.stopPropagation()">📍 Maps</a></div>
+  </div>`).join('');
+}
+
+function toggleFilter(btn,cat){
+  btn.classList.toggle('on');
+  const show=btn.classList.contains('on');
+  mapMarkers.forEach(m=>{
+    const dat=ALL[CUR];
+    const all=[...(dat.heritage||[]),...(dat.culture||[]),...(dat.living||[]),...(dat.economy||[])];
+    const s=all.find(x=>x.nm===m.title);
+    if(s&&s.cat===cat)m.setVisible(show);
+  });
+}
+
+/* ── MODALS ── */
+function openHModal(h){
+  if(typeof h==='string')h=JSON.parse(h);
+  document.getElementById('m-sub').textContent=h.tp||'';
+  document.getElementById('m-title').textContent=h.nm||'';
+  document.getElementById('m-img').src=h.img||'';
+  document.getElementById('m-img').alt=h.nm||'';
+  document.getElementById('m-tags').innerHTML=`<span class="m-tag" style="background:rgba(185,74,28,.1);color:#B94A1C">${esc(h.tp||'')}</span>${h.pr?`<span class="m-tag" style="background:rgba(10,22,40,.08);color:#0A1628">${esc(h.pr)}</span>`:''}<span class="m-tag" style="background:rgba(26,74,46,.1);color:#1A4A2E">${esc(h.st||'')}</span>`;
+  document.getElementById('m-desc').textContent=h.de||'';
+  const lat=h.lat||25.32,lng=h.lng||83;
+  document.getElementById('m-facts').innerHTML=h.fa?Object.entries(h.fa).map(([k,v])=>`<div class="mf"><div class="mf-l">${esc(k)}</div><div class="mf-v">${esc(v)}</div></div>`).join(''):'';
+  document.getElementById('m-gmbtn').href=gU(lat,lng);
+  document.getElementById('modal-bg').classList.add('open');
+}
+
+function openPModal(p){
+  if(typeof p==='string')p=JSON.parse(p);
+  document.getElementById('m-sub').textContent=p.tg||'';
+  document.getElementById('m-title').textContent=p.nm||'';
+  document.getElementById('m-img').src=`https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=75`;
+  document.getElementById('m-img').alt=p.nm||'';
+  document.getElementById('m-tags').innerHTML=`<span class="m-tag" style="background:${p.tc||'rgba(10,22,40,.1)'};color:${p.tv||'#0A1628'}">${esc(p.tg||'')}</span>`;
+  document.getElementById('m-desc').textContent=p.de||'';
+  document.getElementById('m-facts').innerHTML=`<div class="mf"><div class="mf-l">Role</div><div class="mf-v">${esc(p.rl||'')}</div></div>`;
+  document.getElementById('m-gmbtn').href=gS((p.nm||'')+' '+DIST[CUR].name);
+  document.getElementById('modal-bg').classList.add('open');
+}
+
+function closeModal(e){if(!e||e.target===document.getElementById('modal-bg'))document.getElementById('modal-bg').classList.remove('open');}
+
+/* ── NAVIGATION ── */
+function switchPage(page,tabId){
+  document.querySelectorAll('.tn').forEach(t=>t.classList.remove('on'));
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('on'));
+  if(tabId)document.getElementById(tabId).classList.add('on');
+  document.getElementById('page-'+page).classList.add('on');
+  if(page==='map'&&!mapInited)loadMap();
+  if(page==='map')renderMapList();
+  if(page==='dash')renderDash();
+  if(page==='portal')renderOverview();
+}
+
+function showPanel(id,el){
+  document.querySelectorAll('.sbn').forEach(n=>n.classList.remove('on'));
+  if(el)el.classList.add('on');
+  document.querySelectorAll('.cpanel').forEach(p=>p.classList.remove('on'));
+  document.getElementById('p-'+id).classList.add('on');
+  if(id==='overview')renderOverview();
+  else renderPanel(id);
+}
+
+function changeDistrict(v){
+  CUR=v;
+  const d=DIST[v];
+  document.getElementById('sb-name').textContent=d.name;
+  document.getElementById('sb-hi').textContent=d.hi;
+  document.getElementById('sb-state').textContent=d.state;
+  document.getElementById('sb-img').src=d.img;
+  const kpis=document.querySelectorAll('#sb-kpis-grid .sb-kpi');
+  [{v:d.pop,l:'Population'},{v:d.vil,l:'Villages'},{v:d.teh,l:'Tehsils'},{v:d.hist,l:'Yrs History'}].forEach((x,i)=>{if(kpis[i]){kpis[i].querySelector('.sbk-n').textContent=x.v;kpis[i].querySelector('.sbk-l').textContent=x.l;}});
+  document.getElementById('hero-bg').style.backgroundImage=`url('${d.heroImg}')`;
+  document.getElementById('map-title').textContent=`Heritage Map — ${d.name}`;
+  // Reset panels so they re-render for new district
+  document.querySelectorAll('.cpanel').forEach(p=>{delete p.dataset.dist;});
+  renderOverview();
+  renderMapList();
+  if(gmap){gmap.setCenter({lat:d.lat,lng:d.lng});addMapMarkers();}
+  renderDash();
+}
+
+function searchFilter(q){
+  document.querySelectorAll('.sbn').forEach(n=>{n.style.opacity=q&&!n.textContent.toLowerCase().includes(q.toLowerCase())?'0.2':'';});
+}
+
+function updateTime(){
+  const el=document.getElementById('dash-time');
+  if(el)el.textContent='Updated '+new Date().toLocaleTimeString('en-IN',{hour:'2-digit',minute:'2-digit'})+' IST';
+}
+
+window.addEventListener('DOMContentLoaded',()=>{
+  renderDistrictRow();
+  renderOverview();
+  renderMapList();
+  renderDash();
+  updateTime();
+  setInterval(updateTime,30000);
+});
+
+</script>
+</body>
+</html>
